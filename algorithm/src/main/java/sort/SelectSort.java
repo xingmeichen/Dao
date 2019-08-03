@@ -1,4 +1,4 @@
-package algorithm.sort;
+package sort;
 
 import algorithm.PrintUtil;
 import com.google.common.collect.Lists;

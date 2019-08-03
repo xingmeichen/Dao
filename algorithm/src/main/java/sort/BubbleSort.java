@@ -1,6 +1,5 @@
-package algorithm.sort;
+package sort;
 
-import algorithm.PrintUtil;
 import org.apache.commons.collections.CollectionUtils;
 
 import java.util.Arrays;
