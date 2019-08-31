@@ -1,7 +1,5 @@
 package sort;
 
-import algorithm.PrintUtil;
-import com.google.common.collect.Lists;
 import org.apache.commons.collections.CollectionUtils;
 
 import java.util.Arrays;
