@@ -9,8 +9,8 @@ package leetcode;
 
 import java.util.Random;
 
-public class Solution {
-    
+public class AddTwoNumber {
+
     public ListNode addTwoNumbersV(ListNode l1, ListNode l2) {
         int multiple1 = 1, multiple2 = 1;
         int total = 0;
@@ -108,16 +108,16 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
-        ListNode l1 = solution.gen(7);
-        ListNode l2 = solution.gen(3);
-        ListNode result = solution.addTwoNumbers(l1, l2);
+        AddTwoNumber addTwoNumber = new AddTwoNumber();
+        ListNode l1 = addTwoNumber.gen(7);
+        ListNode l2 = addTwoNumber.gen(3);
+        ListNode result = addTwoNumber.addTwoNumbers(l1, l2);
         System.out.println();
-        solution.print(l1);
+        addTwoNumber.print(l1);
         System.out.println();
-        solution.print(l2);
+        addTwoNumber.print(l2);
         System.out.println();
-        solution.print(result);
+        addTwoNumber.print(result);
         System.out.println();
     }
 }
