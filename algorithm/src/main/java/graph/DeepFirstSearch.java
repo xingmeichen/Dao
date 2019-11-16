@@ -13,7 +13,12 @@ public class DeepFirstSearch {
     /***
      * 用一个二维数组初始化一个图，两个节点之间可达用1表示，否则用0表示
      * */
-    private int[][] map = {{1,0,1,1}, {0,1,1,0}, {1,1,1,0}, {1,0,0,1}};
+    private int[][] map = {
+            {0,0,1,1},
+            {0,0,1,0},
+            {1,1,0,0},
+            {1,0,0,0}
+    };
 
     public void print(int[][] map) {
         if (null == map || map.length <= 0) {
@@ -46,12 +51,7 @@ public class DeepFirstSearch {
 
     public static void main(String[] args) {
         DeepFirstSearch dfs = new DeepFirstSearch();
-        dfs.print(dfs.map);
         int[] road = new int[dfs.map.length];
         dfs.deepTravel(dfs.map, road, 0);
-        System.out.println("---------");
-        for (int i = 0; i < road.length; i++) {
-            System.out.println(road[i]);
-        }
     }
 }
