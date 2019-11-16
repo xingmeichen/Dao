@@ -13,20 +13,28 @@ public class BreadthFirstSearch {
 
     /***
      * 用一个二维数组初始化一个图，两个节点之间可达用1表示，否则用0表示
+     * 无向图的邻接矩阵有两个特点
+     * （1）对角线（左上角至右下角）上的元素值全为0，表示每个点到它自身没有路径
+     * （2）其他的元素关于对角线对称
      * */
-    private int[][] map = {
-            {0,0,1,1},
-            {0,0,1,0},
-            {1,1,0,0},
-            {1,0,0,0}
+    private int[][] graph = {
+            {0,1,0,0,0,1,0,0,0},
+            {1,0,1,0,0,0,1,0,1},
+            {0,1,0,1,0,0,0,0,1},
+            {0,0,1,0,1,0,1,1,1},
+            {0,0,0,1,0,1,0,1,0},
+            {1,0,0,0,1,0,1,0,0},
+            {0,1,0,1,0,1,0,1,0},
+            {0,0,0,1,1,0,1,0,1},
+            {0,1,1,1,0,0,0,0,0}
     };
 
-    public void print(int[][] map) {
-        if (null == map || map.length <= 0) {
+    public void print(int[][] graph) {
+        if (null == graph || graph.length <= 0) {
             return;
         }
-        for (int i = 0; i < map.length; i++) {
-            int[] array = map[i];
+        for (int i = 0; i < graph.length; i++) {
+            int[] array = graph[i];
             for (int j = 0; j < array.length; j++) {
                 if (0 < j) {
                     System.out.print(", ");
@@ -37,7 +45,7 @@ public class BreadthFirstSearch {
         }
     }
 
-    public Queue breadthTravel(int[][] map, Queue<Integer> queue, int[] searchTag) {
+    public Queue breadthTravel(int[][] graph, Queue<Integer> queue, int[] searchTag) {
         int index = - 1;
         if (0 < queue.size()) {
             index = queue.poll();
@@ -56,13 +64,13 @@ public class BreadthFirstSearch {
             return queue;
         }
         searchTag[index] = 1;
-        for (int i = 0; i < map[index].length; i++) {
-            if (1 == map[index][i] && 0 == searchTag[i]) {
+        for (int i = 0; i < graph[index].length; i++) {
+            if (1 == graph[index][i] && 0 == searchTag[i]) {
                 queue.add(i);
                 searchTag[i] = 1;
             }
         }
-        breadthTravel(map, queue, searchTag);
+        breadthTravel(graph, queue, searchTag);
         return queue;
     }
 
@@ -70,6 +78,6 @@ public class BreadthFirstSearch {
         BreadthFirstSearch search = new BreadthFirstSearch();
         Queue<Integer> queue = new LinkedBlockingQueue();
         queue.add(0);
-        search.breadthTravel(search.map, queue, new int[search.map.length]);
+        search.breadthTravel(search.graph, queue, new int[search.graph.length]);
     }
 }
