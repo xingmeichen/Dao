@@ -59,6 +59,12 @@ public class BreadthFirstSearch {
                 }
                 i++;
             }
+            if (i == searchTag.length) {
+                // 说明了所有的节点都已经遍历到了，所以直接将队列中的元素打印出来
+                while (0 < queue.size()) {
+                    System.out.println(queue.poll());
+                }
+            }
         }
         if (index == -1) {
             return queue;
