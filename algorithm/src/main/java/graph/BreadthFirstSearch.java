@@ -1,6 +1,8 @@
 package graph;
 
+import java.util.HashSet;
 import java.util.Queue;
+import java.util.Set;
 import java.util.concurrent.LinkedBlockingQueue;
 
 /**
@@ -29,6 +31,23 @@ public class BreadthFirstSearch {
             {0,1,1,1,0,0,0,0,0}
     };
 
+    private int[][] graph1 = {
+            {0,1,1,0,0,0,0},
+            {1,0,0,1,0,0,1},
+            {1,0,0,0,0,1,1},
+            {0,1,0,0,1,0,0},
+            {0,0,0,1,0,1,1},
+            {0,0,1,0,1,0,0},
+            {0,1,1,0,1,0,0}
+    };
+
+    private int[][] graph2 = {
+            {0,0,1,1},
+            {0,0,1,0},
+            {1,1,0,0},
+            {1,0,0,0}
+    };
+
     public void print(int[][] graph) {
         if (null == graph || graph.length <= 0) {
             return;
@@ -45,21 +64,13 @@ public class BreadthFirstSearch {
         }
     }
 
-    public Queue breadthTravel(int[][] graph, Queue<Integer> queue, int[] searchTag) {
+    public Queue breadthTravel(int[][] graph, Queue<Integer> queue, Set<Integer> set) {
         int index = - 1;
         if (0 < queue.size()) {
             index = queue.poll();
             System.out.println(index);
         } else {
-            int i = 0;
-            while (i < searchTag.length) {
-                if (searchTag[i] == 0) {
-                    index = i;
-                    break;
-                }
-                i++;
-            }
-            if (i == searchTag.length) {
+            if (graph.length == set.size()) {
                 // 说明了所有的节点都已经遍历到了，所以直接将队列中的元素打印出来
                 while (0 < queue.size()) {
                     System.out.println(queue.poll());
@@ -69,14 +80,14 @@ public class BreadthFirstSearch {
         if (index == -1) {
             return queue;
         }
-        searchTag[index] = 1;
+        set.add(index);
         for (int i = 0; i < graph[index].length; i++) {
-            if (1 == graph[index][i] && 0 == searchTag[i]) {
+            if (1 == graph[index][i] && !set.contains(i)) {
                 queue.add(i);
-                searchTag[i] = 1;
+                set.add(i);
             }
         }
-        breadthTravel(graph, queue, searchTag);
+        breadthTravel(graph, queue, set);
         return queue;
     }
 
@@ -84,6 +95,7 @@ public class BreadthFirstSearch {
         BreadthFirstSearch search = new BreadthFirstSearch();
         Queue<Integer> queue = new LinkedBlockingQueue();
         queue.add(0);
-        search.breadthTravel(search.graph, queue, new int[search.graph.length]);
+        Set<Integer> set = new HashSet();
+        search.breadthTravel(search.graph2, queue, set);
     }
 }

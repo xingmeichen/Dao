@@ -1,7 +1,5 @@
 package graph;
 
-import com.sun.org.apache.xerces.internal.dom.DeepNodeListImpl;
-
 /**
  * @project: JavaLearning
  * @description:
@@ -13,19 +11,19 @@ public class DeepFirstSearch {
     /***
      * 用一个二维数组初始化一个图，两个节点之间可达用1表示，否则用0表示
      * */
-    private int[][] map = {
+    private int[][] graph = {
             {0,0,1,1},
             {0,0,1,0},
             {1,1,0,0},
             {1,0,0,0}
     };
 
-    public void print(int[][] map) {
-        if (null == map || map.length <= 0) {
+    public void print(int[][] graph) {
+        if (null == graph || graph.length <= 0) {
             return;
         }
-        for (int i = 0; i < map.length; i++) {
-            int[] array = map[i];
+        for (int i = 0; i < graph.length; i++) {
+            int[] array = graph[i];
             for (int j = 0; j < array.length; j++) {
                 if (0 < j) {
                     System.out.print(", ");
@@ -51,7 +49,7 @@ public class DeepFirstSearch {
 
     public static void main(String[] args) {
         DeepFirstSearch dfs = new DeepFirstSearch();
-        int[] road = new int[dfs.map.length];
-        dfs.deepTravel(dfs.map, road, 0);
+        int[] road = new int[dfs.graph.length];
+        dfs.deepTravel(dfs.graph, road, 0);
     }
 }
