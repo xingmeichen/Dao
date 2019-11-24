@@ -1,5 +1,3 @@
-package base;
-
 /**
  * @project: JavaLearning
  * @description:
