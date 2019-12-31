@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.lang.reflect.*;
+import java.util.Objects;
 
 /**
  * @author Mabel
@@ -21,6 +22,8 @@ public class JDKProxy implements InvocationHandler {
     }
 
     public Object getTargetObject(Object targetObject) {
+        // targetObject必须明确指定（不能为null）,否则抛出异常
+        Objects.requireNonNull(targetObject, "Target object cannot be null");
         this.targetObject = targetObject;
         return Proxy.newProxyInstance(targetObject.getClass().getClassLoader(), targetObject.getClass().getInterfaces(), this);
     }
