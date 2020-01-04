@@ -9,16 +9,22 @@ import java.util.List;
  **/
 public class StaticOrNot {
 
-    public static void main(String[] args) {
-        staticFunction(b);
+    public static void greeting() {
+        System.out.println("Hello, nice to meet you!");
+    }
 
-        List<Integer> list = new ArrayList();
-        list.add(2);
-        list.add(1);
-        list.add(3);
-        for (int i = 0; i < list.size(); i++) {
-            System.out.println(list.get(i));
-        }
+    public static void main(String[] args) {
+//        staticFunction(b);
+//
+//        List<Integer> list = new ArrayList();
+//        list.add(2);
+//        list.add(1);
+//        list.add(3);
+//        for (int i = 0; i < list.size(); i++) {
+//            System.out.println(list.get(i));
+//        }
+        StaticOrNot staticOrNot = null;
+        staticOrNot.greeting();
     }
 
     public StaticOrNot() {

@@ -2,10 +2,10 @@
  * @project: JavaLearning
  * @description:
  * @author: Mabel.Chen
- * @create: 2019-12-20 22:17
+ * @create: 2020-01-04 13:09
  **/
-public class Main {
-
+public class TryCatchFinally {
+    
     public static String test() {
         try {
             int i = 1 / 0;
