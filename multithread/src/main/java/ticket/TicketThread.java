@@ -73,6 +73,7 @@ public class TicketThread extends Thread {
     public static void main(String[] args) throws Exception {
         TicketThread ticketThread1 = new TicketThread("ticketThread1");
         TicketThread ticketThread2 = new TicketThread("ticketThread2");
+        Thread thread = Thread.currentThread();
         ticketThread1.start();
         ticketThread2.start();
         ticketThread1.testJoin();

@@ -14,7 +14,7 @@ public class TicketCallable implements Callable<Integer> {
     private static final Integer TOTAL = 100;
     private static Integer quantity = TOTAL;
 
-    // 该字段相当与一个锁，因为在run方法中对这个锁同步，所以只有获得该锁的线程才能执行同步代码块
+    // 该字段相当于一个锁，因为在run方法中对这个锁同步，所以只有获得该锁的线程才能执行同步代码块
     private static String lock = "lock";
 
     private String name;
