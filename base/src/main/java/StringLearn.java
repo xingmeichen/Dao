@@ -44,5 +44,7 @@ public class StringLearn {
         System.out.println("before swap: a = " + a + ", b = " + b);
         swap(a, b);
         System.out.println("after swap: a = " + a + ", b = " + b);
+        System.out.println(1+2+3+"Hello"); // 6Hello
+        System.out.println("Hello"+1+2+3); // Hello123
     }
 }
