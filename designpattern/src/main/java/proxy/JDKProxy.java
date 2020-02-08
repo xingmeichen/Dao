@@ -1,9 +1,8 @@
 package proxy;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import java.lang.reflect.*;
+import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Method;
+import java.lang.reflect.Proxy;
 import java.util.Objects;
 
 /**
@@ -11,7 +10,7 @@ import java.util.Objects;
  */
 public class JDKProxy implements InvocationHandler {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(JDKProxy.class);
+    //private static final Logger LOGGER = LoggerFactory.getLogger(JDKProxy.class);
 
     private Object targetObject;
 
