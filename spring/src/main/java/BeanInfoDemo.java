@@ -1,3 +1,4 @@
+import common.Person;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -19,11 +20,12 @@ public class BeanInfoDemo {
     public static void main(String[] args) {
         try {
             BeanInfo beanInfo = Introspector.getBeanInfo(Person.class);
-            Stream.of(beanInfo.getPropertyDescriptors()).forEach(item -> {
-                Class<?> propertyType = item.getPropertyType();
+            Stream.of(beanInfo.getPropertyDescriptors()).forEach(propertyDescriptor -> {
+                String propertyName = propertyDescriptor.getName();
+                System.out.println(propertyName);
             });
         } catch (IntrospectionException e) {
-            LOGGER.error("get bean info error");
+            LOGGER.error("get ioc info error");
         }
     }
 }
