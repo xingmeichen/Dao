@@ -4,13 +4,15 @@ import com.google.common.collect.Maps;
 import common.Person;
 import common.Student;
 import common.User;
+import common.UserAnnotation;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.ListableBeanFactory;
+import org.springframework.beans.factory.support.DefaultListableBeanFactory;
+import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 
 /**
  * @project: JavaLearning
@@ -20,14 +22,24 @@ import java.util.Objects;
  **/
 public class XmlBaseConfig {
 
-    public static void main(String[] args) {
+    /**
+     * 通过 {@link ClassPathXmlApplicationContext} 类读取xml文件配置的元数据
+     * */
+    public static void loadXmlByClassPath(String[] args) {
         BeanFactory beanFactory = new ClassPathXmlApplicationContext("classpath:/META-INFO/xml-base-config.xml");
         User user = (User) beanFactory.getBean("user");
         System.out.println(user);
         Student student = beanFactory.getBean(Student.class);
         System.out.println(student);
+    }
 
-        System.out.println("-----------------------这是一条分割线----------------------");
+    /**
+     * 通过 {@link XmlBeanDefinitionReader} 类读取xml文件配置的元数据
+     * */
+    public static void loadXmlByReader() {
+        DefaultListableBeanFactory beanFactory = new DefaultListableBeanFactory();
+        XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(beanFactory);
+        reader.loadBeanDefinitions("classpath:/META-INFO/xml-base-config.xml");
         listBean(beanFactory);
     }
 
@@ -41,5 +53,9 @@ public class XmlBaseConfig {
             });
         }
         return users;
+    }
+
+    public static void main(String[] args) {
+        loadXmlByReader();
     }
 }
