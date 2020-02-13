@@ -1,4 +1,4 @@
-package ioc;
+package ioc.bean.dependency.injection;
 
 import common.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,9 +10,9 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
  * @project: JavaLearning
  * @description: 通过字段注入的方式完成依赖注入
  * @author: Mabel.Chen
- * @create: 2020-02-10 18:32
+ * @create: 2020-02-13 11:41
  **/
-public class AnnotationBaseConfig {
+public class PropertyInject {
 
     @Autowired
     private User user;
@@ -24,13 +24,13 @@ public class AnnotationBaseConfig {
     public static void loadBeanByAnnotation() {
         AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext();
         // 注意：这里注册的是当前类
-        applicationContext.register(AnnotationBaseConfig.class);
+        applicationContext.register(PropertyInject.class);
         XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(applicationContext);
         reader.loadBeanDefinitions("classpath:/META-INFO/annotation-base-config.xml");
         // 手动启动上下文 (注意：在加载或者说注册完元配置信息之后才能启动上下文)
         applicationContext.refresh();
 
-        AnnotationBaseConfig config = applicationContext.getBean(AnnotationBaseConfig.class);
+        PropertyInject config = applicationContext.getBean(PropertyInject.class);
         System.out.println(config.user);
 
         // 手动关闭上下文

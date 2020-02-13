@@ -1,4 +1,4 @@
-package ioc;
+package ioc.metadata;
 
 import common.User;
 import org.springframework.beans.factory.config.BeanDefinition;
@@ -8,7 +8,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 /**
  * @project: JavaLearning
- * @description:
+ * @description: 基于Java Api的元数据配置
  * @author: Mabel.Chen
  * @create: 2020-02-10 18:00
  **/
