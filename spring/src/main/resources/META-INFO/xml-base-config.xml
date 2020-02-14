@@ -18,4 +18,9 @@
         <property name="name" value="Monica"/>
         <property name="number" value="2020001"/>
     </bean>
+
+
+    <bean id="userFactory" class="util.UserFactory">
+        <lookup-method name="createUser" bean="user"></lookup-method>
+    </bean>
 </beans>

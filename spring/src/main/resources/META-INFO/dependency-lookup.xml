@@ -8,7 +8,12 @@
         <property name="name" value="Mabel"></property>
     </bean>
 
-    <bean id="userFactory" class="util.UserFactory">
-        <lookup-method name="createUser" bean="user"></lookup-method>
+    <bean id="subUser" class="common.SubUser" parent="user" primary="true">
+        <property name="phone" value="10086"/>
     </bean>
+
+    <bean id="objectFactory" class="org.springframework.beans.factory.config.ObjectFactoryCreatingFactoryBean">
+        <property name="targetBeanName" value="user"/>
+    </bean>
+
 </beans>
