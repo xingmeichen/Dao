@@ -1,6 +1,6 @@
 package ioc.bean.dependency.injection;
 
-import common.User;
+import domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
@@ -26,7 +26,7 @@ public class PropertyInject {
         // 注意：这里注册的是当前类
         applicationContext.register(PropertyInject.class);
         XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(applicationContext);
-        reader.loadBeanDefinitions("classpath:/META-INFO/annotation-base-config.xml");
+        reader.loadBeanDefinitions("classpath:/META-INF/annotation-base-config.xml");
         // 手动启动上下文 (注意：在加载或者说注册完元配置信息之后才能启动上下文)
         applicationContext.refresh();
 

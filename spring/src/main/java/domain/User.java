@@ -1,6 +1,7 @@
-package common;
+package domain;
 
 import lombok.Data;
+import lombok.experimental.Accessors;
 
 /**
  * @project: JavaLearning
@@ -9,10 +10,16 @@ import lombok.Data;
  * @create: 2020-02-10 13:50
  **/
 @Data
+@Accessors(chain = true)
 public class User {
 
     private Long id;
     private String name;
+
+    public User() {
+        this.id = 10000L;
+        this.name = "Mabel";
+    }
 
     @Override
     public String toString() {
@@ -20,5 +27,11 @@ public class User {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 '}';
+    }
+
+    public static User createUser() {
+        User user = new User();
+        user.setId(10000L).setName("Mabel");
+        return user;
     }
 }

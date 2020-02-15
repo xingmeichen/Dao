@@ -1,6 +1,6 @@
 package ioc.bean.scope;
 
-import common.User;
+import domain.User;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -14,7 +14,7 @@ public class BeanScope {
 
     public static void singletonScope() {
 
-        BeanFactory beanFactory = new ClassPathXmlApplicationContext("classpath:/META-INFO/bean-scope.xml");
+        BeanFactory beanFactory = new ClassPathXmlApplicationContext("classpath:/META-INF/bean-scope.xml");
         User user = (User) beanFactory.getBean("user");
         User user1 = (User) beanFactory.getBean("user");
         /**
@@ -25,7 +25,7 @@ public class BeanScope {
     }
 
     public static void prototypeScope() {
-        BeanFactory beanFactory = new ClassPathXmlApplicationContext("classpath:/META-INFO/bean-scope.xml");
+        BeanFactory beanFactory = new ClassPathXmlApplicationContext("classpath:/META-INF/bean-scope.xml");
         User otherUser = (User) beanFactory.getBean("otherUser");
         User otherUser1 = (User) beanFactory.getBean("otherUser");
         /**

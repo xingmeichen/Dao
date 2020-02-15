@@ -1,10 +1,9 @@
 package ioc.metadata;
 
 import com.google.common.collect.Maps;
-import common.Student;
-import common.User;
+import domain.Student;
+import domain.User;
 import org.springframework.beans.factory.BeanFactory;
-import org.springframework.beans.factory.FactoryBean;
 import org.springframework.beans.factory.ListableBeanFactory;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.support.BeanDefinitionBuilder;
@@ -33,7 +32,7 @@ public class XmlBaseConfig {
          * 1、配置XML文件 （setConfigLocations(...)）
          * 2、启动应用上下文 refresh()
          */
-        BeanFactory beanFactory = new ClassPathXmlApplicationContext("classpath:/META-INFO/xml-base-config.xml");
+        BeanFactory beanFactory = new ClassPathXmlApplicationContext("classpath:/META-INF/xml-base-config.xml");
 
 
         User user = (User) beanFactory.getBean("user");
@@ -48,7 +47,7 @@ public class XmlBaseConfig {
     public static void loadXmlByReader() {
         DefaultListableBeanFactory beanFactory = new DefaultListableBeanFactory();
         XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(beanFactory);
-        reader.loadBeanDefinitions("classpath:/META-INFO/xml-base-config.xml");
+        reader.loadBeanDefinitions("classpath:/META-INF/xml-base-config.xml");
         listBean(beanFactory);
     }
 
@@ -69,7 +68,7 @@ public class XmlBaseConfig {
         BeanDefinition beanDefinition = BeanDefinitionBuilder.genericBeanDefinition(UserFactory.class).getBeanDefinition();
         applicationContext.registerBeanDefinition("userFactory", beanDefinition);
         XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(applicationContext);
-        reader.loadBeanDefinitions("classpath:/META-INFO/dependency-lookup.xml");
+        reader.loadBeanDefinitions("classpath:/META-INF/dependency-lookup.xml");
         // 手动启动应用上下文
         applicationContext.refresh();
 

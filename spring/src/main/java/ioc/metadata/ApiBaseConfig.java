@@ -1,6 +1,6 @@
 package ioc.metadata;
 
-import common.User;
+import domain.User;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.support.BeanDefinitionBuilder;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
@@ -16,11 +16,9 @@ public class ApiBaseConfig {
 
     public static void main(String[] args) {
         AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext();
-        BeanDefinition beanDefinition = createBeanDefinition("user");
-        applicationContext.registerBeanDefinition("user", beanDefinition);
 
-        XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(applicationContext);
-        reader.loadBeanDefinitions("classpath:/META-INFO/xml-base-config.xml");
+        BeanDefinition beanDefinition = createBeanDefinition();
+        applicationContext.registerBeanDefinition("user", beanDefinition);
 
         // 手动启动应用上下文（务必注意它的启动时期，在载入配置信息完成后才能启动）
         applicationContext.refresh();
@@ -33,7 +31,11 @@ public class ApiBaseConfig {
         applicationContext.close();
     }
 
-    private static BeanDefinition createBeanDefinition(String beanClassName) {
-        return BeanDefinitionBuilder.genericBeanDefinition(beanClassName).getBeanDefinition();
+    private static BeanDefinition createBeanDefinition() {
+        BeanDefinitionBuilder builder = BeanDefinitionBuilder.genericBeanDefinition(User.class);
+        builder.addPropertyValue("id", 1000);
+        builder.addPropertyValue("name", "Mabel");
+        BeanDefinition beanDefinition = builder.getBeanDefinition();
+        return beanDefinition;
     }
 }

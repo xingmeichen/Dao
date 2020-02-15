@@ -1,6 +1,4 @@
-package common;
-
-import javax.jws.soap.SOAPBinding;
+package domain;
 
 /**
  * @project: JavaLearning

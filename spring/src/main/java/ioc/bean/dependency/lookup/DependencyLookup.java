@@ -1,7 +1,7 @@
 package ioc.bean.dependency.lookup;
 
-import common.User;
-import common.UserAnnotation;
+import domain.User;
+import domain.UserAnnotation;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.ListableBeanFactory;
 import org.springframework.beans.factory.ObjectFactory;
@@ -32,7 +32,7 @@ public class DependencyLookup {
         System.out.println(user);
     }
 
-    public static void looupColletionByType(BeanFactory beanFactory) {
+    public static void lookupColletionByType(BeanFactory beanFactory) {
         if (beanFactory instanceof ListableBeanFactory) {
             ListableBeanFactory listableBeanFactory = (ListableBeanFactory) beanFactory;
             Map<String, User> beans = listableBeanFactory.getBeansOfType(User.class);
@@ -51,12 +51,12 @@ public class DependencyLookup {
     }
 
     public static void main(String[] args) {
-        BeanFactory beanFactory = new ClassPathXmlApplicationContext("classpath:/META-INFO/dependency-lookup.xml");
+        BeanFactory beanFactory = new ClassPathXmlApplicationContext("classpath:/META-INF/dependency-lookup.xml");
         lookupInRealTime(beanFactory);
         lookupInLazy(beanFactory);
         lookupByType(beanFactory);
         System.out.println("---------------------");
-        looupColletionByType(beanFactory);
+        lookupColletionByType(beanFactory);
         lookupByAnnotation(beanFactory);
     }
 }

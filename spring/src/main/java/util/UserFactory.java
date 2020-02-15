@@ -1,7 +1,7 @@
 package util;
 
-import common.Person;
-import common.User;
+import domain.Person;
+import domain.User;
 
 /**
  * @project: JavaLearning

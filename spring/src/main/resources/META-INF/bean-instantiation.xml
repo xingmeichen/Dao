@@ -1,0 +1,17 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="userByStaticMethod" class="domain.User" factory-method="createUser"/>
+
+    <bean id="userByInstanceMethod" factory-bean="userFactory" factory-method="createUser"/>
+
+    <bean id="userFactory" class="util.DefaultUserFactory"/>
+
+    <bean id="userByFactoryBean" class="util.UserFactoryBean"/>
+
+    <bean id="userServiceLoader" class="org.springframework.beans.factory.serviceloader.ServiceLoaderFactoryBean">
+        <property name="serviceType" value="util.IUserFactory"/>
+    </bean>
+</beans>
