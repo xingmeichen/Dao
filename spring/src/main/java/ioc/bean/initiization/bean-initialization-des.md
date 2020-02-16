@@ -1,0 +1,1 @@
+## ioc.bean.initiization包下介绍三种Bean初始化的方式
