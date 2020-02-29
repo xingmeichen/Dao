@@ -42,7 +42,12 @@ public class ResolvableDependencySource {
     public static void successDemo() {
         AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext();
         applicationContext.register(ResolvableDependencySource.class);
-        // 这是一个回调操作
+        /**
+         * 注册ResolvableDependency
+         * 这是一个生命周期回调操作, 这个回调的触发是因为 AbstractApplicationContext#invokeBeanFactoryPostProcessors 这个方法的调用
+         */
+
+
         applicationContext.addBeanFactoryPostProcessor(factory -> factory.registerResolvableDependency(User.class, User.createUser()));
 
         applicationContext.refresh();
