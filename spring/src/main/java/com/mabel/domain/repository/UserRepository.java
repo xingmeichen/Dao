@@ -1,5 +1,6 @@
 package com.mabel.domain.repository;
 
+import com.mabel.domain.User;
 import lombok.Data;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.ObjectFactory;

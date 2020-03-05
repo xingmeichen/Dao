@@ -20,7 +20,7 @@ public class BeanInfoDemo {
 
     public static void main(String[] args) {
         try {
-            BeanInfo beanInfo = Introspector.getBeanInfo();
+            BeanInfo beanInfo = Introspector.getBeanInfo(BeanInfo.class);
             Stream.of(beanInfo.getPropertyDescriptors()).forEach(propertyDescriptor -> {
                 String propertyName = propertyDescriptor.getName();
                 System.out.println(propertyName);
