@@ -3,12 +3,12 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="user" class="domain.User" >
+    <bean id="user" class="com.mabel.domain.User" >
         <property name="id" value="1"></property>
         <property name="name" value="Mabel"></property>
     </bean>
 
-    <bean id="subUser" class="domain.SubUser" parent="user" primary="true">
+    <bean id="subUser" class="com.mabel.domain.SubUser" parent="user" primary="true">
         <property name="phone" value="10086"/>
     </bean>
 
