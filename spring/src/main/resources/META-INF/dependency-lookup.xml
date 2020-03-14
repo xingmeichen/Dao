@@ -3,11 +3,14 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <!-- RootBeanDefinition 不需要合并，没有parent -->
+    <!-- 普通类的definition GenericBeanDefinition -->
     <bean id="user" class="com.mabel.domain.User" >
         <property name="id" value="1"></property>
         <property name="name" value="Mabel"></property>
     </bean>
 
+    <!-- 合并后的definition 最终也会变成RootBeanDefinition -->
     <bean id="subUser" class="com.mabel.domain.SubUser" parent="user" primary="true">
         <property name="phone" value="10086"/>
     </bean>
