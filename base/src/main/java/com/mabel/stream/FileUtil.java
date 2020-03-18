@@ -8,7 +8,7 @@ import java.io.*;
 
 /**
  * @project:
- * @description:
+ * @description: 读写文件示例，// TODO 待补充
  * @author: Mabel.Chen
  * @create: 2020/3/17
  **/
@@ -16,6 +16,9 @@ public class FileUtil {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(FileUtil.class);
 
+    /**
+     * 字节流写文件
+     * */
     public static void writeFile() {
         // 定义文件路径
         String dir = "tmp";
@@ -39,6 +42,9 @@ public class FileUtil {
         }
     }
 
+    /**
+     * 字节流读文件，不用考虑编码问题，没有缓冲区
+     */
     public static void readFile(String filePath) {
         File file = new File(filePath);
         FileInputStream fileInputStream = null;
@@ -53,6 +59,10 @@ public class FileUtil {
         }
     }
 
+
+    /**
+     * 字符流读文件，需要考虑编码问题，存在缓冲区
+     * */
     public static void readFileByReader(String filePath) {
         File file = new File(filePath);
         BufferedReader reader = null;
