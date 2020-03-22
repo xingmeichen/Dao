@@ -1,5 +1,6 @@
 package com.mabel.ioc.bean.initiization;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,6 +15,8 @@ import org.springframework.context.annotation.Lazy;
 @Configuration
 public class BeanInitialization {
 
+    @Autowired
+    private InitializationDomain initializationDomain;
     /**
      * 这里演示了三种Bean初始化的方法：
      * 输出结果是：
@@ -25,7 +28,7 @@ public class BeanInitialization {
      * */
     public static void main(String[] args) {
         notLazyInit();
-        //lazyInit();
+        lazyInit();
     }
 
     /**
@@ -48,7 +51,10 @@ public class BeanInitialization {
         applicationContext.register(BeanInitialization.class);
         applicationContext.refresh();
         System.out.println("应用上下文已启动...");
-        InitializationDomain bean = applicationContext.getBean(InitializationDomain.class); // A
+        BeanInitialization bean = applicationContext.getBean(BeanInitialization.class);
+        InitializationDomain initializationDomain = applicationContext.getBean(InitializationDomain.class); // A
+        InitializationDomain initializationDomain1 = bean.initializationDomain;
+        System.out.println("initializationDomain == initializationDomain1 ? " + (initializationDomain == initializationDomain1));
         applicationContext.close();
     }
 
@@ -70,7 +76,7 @@ public class BeanInitialization {
 
     @Bean(initMethod = "customInit")
     @Lazy // 表示延迟初始化
-    public InitializationDomain fetchIUserFactoryBean() {
+    public InitializationDomain initializationDomain() {
         return new InitializationDomain();
     }
 }

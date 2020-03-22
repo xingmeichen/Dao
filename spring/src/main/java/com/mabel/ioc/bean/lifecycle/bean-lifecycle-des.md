@@ -38,10 +38,42 @@ BeanWrapper
 1. PropertyValues
 2. InstantiationAwareBeanPostProcessor#postProcessProperties
 
+### 属性赋值
+1. AbstractAutowireCapableBeanFactory#populateBean
+
 ### Aware接口回调 (以下按执行的顺序列出)
 1. BeanNameAware
 2. BeanClassLoaderAware
 3. BeanFactoryAware
 4. EnvironmentAware
 5. EmbeddedValueResolverAware
-6. 
+6. ResourceLoaderAware
+7. ApplicationEventPublisherAware
+8. MessageSourceAware
+9. ApplicationContextAware
+
+### 初始化前阶段
+BeanPostProcessor#postProcessBeforeInitialization
+
+### 初始化阶段
+1. @PostConstruct
+2. InitializingBean#afterPropertiesSet
+3. 自定义初始化方法
+
+### 初始化后阶段
+BeanPostProcessor#postProcessAfterInitialization
+
+### 初始化完成阶段
+SmartInitializingSingleton#afterSingletonsInstantiated
+
+### 到这个时候Spring Bean已经可以使用了
+
+### 销毁前阶段
+DestructionAwareBeanPostProcessor#postProcessBeforeDestruction
+
+### 销毁阶段 
+注意: Spring Bean的销毁只是在Bean容器中被销毁，并不表示被GC，GC是java进程做的事情 ！！！
+1. @PreDestroy
+2. DisposableBean#destroy
+3. 自定义销毁方法
+
