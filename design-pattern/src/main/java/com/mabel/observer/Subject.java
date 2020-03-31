@@ -4,7 +4,7 @@ import java.util.Observable;
 
 /**
  * @project:
- * @description: 这是一个主题, 可以使用Java内置的观察者模式
+ * @description: 这是一个主题（可被观察者）, 可以使用Java内置的观察者模式
  * @author: Mabel.Chen
  * @create: 2020/3/30
  **/
