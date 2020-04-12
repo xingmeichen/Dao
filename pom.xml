@@ -9,9 +9,13 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
+        <module>algorithm</module>
         <module>base</module>
+        <module>design-pattern</module>
+        <module>multi-thread</module>
         <module>spring</module>
         <module>notwork</module>
+        <module>util</module>
     </modules>
 
     <dependencies>
@@ -48,6 +52,7 @@
         </dependency>
     </dependencies>
 
+    <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-dependency-plugin -->
     <build>
         <plugins>
             <plugin>
@@ -61,4 +66,18 @@
             </plugin>
         </plugins>
     </build>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    <repositories>
+        <repository>
+            <id>central</id>
+            <name>Maven Repository Switchboard</name>
+            <layout>default</layout>
+            <url>https://repo1.maven.org/maven2</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 </project>

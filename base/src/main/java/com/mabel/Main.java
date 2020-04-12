@@ -29,6 +29,5 @@ public class Main {
 
     public static void main(String[] args) {
         String result = test();
-        Map<Integer, String> map = new HashMap();
     }
 }
