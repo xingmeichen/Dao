@@ -6,7 +6,7 @@ package com.mabel;
  * @author: Mabel.Chen
  * @create: 2019-12-01 11:17
  **/
-public class IntegerLearn {
+public class IntegerDemo {
 
     /***
      * 判断两个值是否相等，Integer和String类型做一个比较，它们又有些不同，主要是因为

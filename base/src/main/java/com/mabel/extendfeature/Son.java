@@ -1,11 +1,14 @@
 package com.mabel.extendfeature;
 
+import lombok.Data;
+
 /**
  * @project: JavaLearning
  * @description:
  * @author: Mabel.Chen
  * @create: 2019-11-17 15:44
  **/
+@Data
 public class Son extends Father {
 
     public Son() {

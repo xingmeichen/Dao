@@ -10,7 +10,7 @@ import java.util.List;
  * @author: Mabel.Chen
  * @create: 2019-11-24 10:24
  **/
-public class ArrayListLearn {
+public class ArrayListDemo {
 
     public static void removeItem() {
         List<String> list = new ArrayList();

@@ -1,12 +1,18 @@
 package com.mabel.extendfeature;
 
+import lombok.Data;
+
 /**
  * @project: JavaLearning
  * @description:
  * @author: Mabel.Chen
  * @create: 2019-11-17 15:44
  **/
+@Data
 public class Father {
+
+    private String name;
+    private Integer age;
 
     public Father() {
         System.out.println("I am Father");

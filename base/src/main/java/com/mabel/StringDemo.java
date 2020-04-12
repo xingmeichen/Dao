@@ -6,7 +6,7 @@ package com.mabel;
  * @author: Mabel.Chen
  * @create: 2019-11-18 18:48
  **/
-public class StringLearn {
+public class StringDemo {
 
     /**
      * 1、== 的结果是true,表示地址相同，也就是指向的是同一个对象

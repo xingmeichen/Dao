@@ -1,5 +1,8 @@
 package com.mabel;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * @project: JavaLearning
  * @description:
@@ -26,6 +29,6 @@ public class Main {
 
     public static void main(String[] args) {
         String result = test();
-        System.out.println(result);
+        Map<Integer, String> map = new HashMap();
     }
 }
