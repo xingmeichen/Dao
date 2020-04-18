@@ -55,7 +55,7 @@ public class TicketThread extends Thread {
     public void testJoin() throws Exception {
         synchronized (lockObj) {
             System.out.println("testJoin start");
-            this.join(20000);
+            this.join(20000); //它会释放锁
             System.out.println("testJoin end");
         }
     }
@@ -63,7 +63,7 @@ public class TicketThread extends Thread {
     public void testSlepp() throws Exception {
         synchronized (lockObj) {
             System.out.println("testSleep start");
-            sleep(10000);
+            sleep(10000); // 它不会释放锁
             System.out.println("testSleep end");
         }
     }
