@@ -10,8 +10,4 @@
     <aop:aspectj-autoproxy />
     <bean class="com.mabel.aop.MabelAspect"/>
     <bean class="com.mabel.aop.MabelTest"/>
-    <bean class="com.mabel.domain.User">
-        <property name="id" value="1"></property>
-        <property name="name" value="Mabel"></property>
-    </bean>
 </beans>
