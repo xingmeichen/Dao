@@ -39,7 +39,7 @@ public class MabelTest {
     }
 
     public static void main(String[] args) {
-        loadByXml();
+        //loadByXml();
         loadByAnnotation();
     }
 }
