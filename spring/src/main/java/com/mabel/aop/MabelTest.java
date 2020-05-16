@@ -1,7 +1,6 @@
 package com.mabel.aop;
 
 import org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator;
-import org.springframework.aop.framework.autoproxy.InfrastructureAdvisorAutoProxyCreator;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -31,6 +30,7 @@ public class MabelTest {
         AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext();
         applicationContext.register(MabelAspect.class);
         applicationContext.register(MabelTest.class);
+        // 需要注册 AnnotationAwareAspectJAutoProxyCreator 用于实现AOP
         applicationContext.register(AnnotationAwareAspectJAutoProxyCreator.class);
         applicationContext.refresh();
         MabelTest bean = applicationContext.getBean(MabelTest.class);
