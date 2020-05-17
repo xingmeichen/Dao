@@ -1,4 +1,4 @@
-package com.mabel;
+package com.mabel.number;
 
 /**
  * @project: JavaLearning
@@ -11,7 +11,7 @@ public class IntegerDemo {
     /***
      * 判断两个值是否相等，Integer和String类型做一个比较，它们又有些不同，主要是因为
      * Integer这个类中定义了一个私有的静态内部类 IntegerCache，它缓存了 【-128， 127】
-     * 这个范围的Integer的值，只有超出这个范围，才会在创建一个新的对象，否则对象直接指向缓存中的值
+     * 这个范围的Integer的值，只有超出这个范围，才会再创建一个新的对象，否则对象直接指向缓存中的值
      * 也就是
      * Integer i1 = 1;
      * Integer i2 = 1;

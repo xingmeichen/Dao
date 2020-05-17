@@ -1,4 +1,4 @@
-package com.mabel;
+package com.mabel.number;
 
 /**
  * @project: JavaLearning
