@@ -1,10 +1,5 @@
 package com.mabel;
 
-import com.mabel.common.User;
-
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * @project: JavaLearning
  * @description:
@@ -13,7 +8,6 @@ import java.util.Map;
  **/
 public class Main {
 
-<<<<<<< HEAD
     private int[] items;
 
     public Main(int capacity) {
@@ -37,9 +31,5 @@ public class Main {
     }
 
     public static void main(String[] args) {
-
-=======
-    public static void main(String[] args) {
->>>>>>> 4a794002ddc2b1c55c08948967269211d757b8ea
     }
 }
