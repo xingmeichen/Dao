@@ -16,8 +16,7 @@ public class LongestPalindromeSubString {
             return inputString;
         }
         int length = inputString.length();
-        int maxStart = 0;
-        int maxLength = 1;
+        int maxLength;
         int start = 0;
         int end = 0;
         for (int i = 0; i < length - 1; i++) {

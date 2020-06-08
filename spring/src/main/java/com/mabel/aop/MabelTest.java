@@ -30,6 +30,7 @@ public class MabelTest {
         AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext();
         applicationContext.register(MabelAspect.class);
         applicationContext.register(MabelTest.class);
+        // 需要注册 AnnotationAwareAspectJAutoProxyCreator 用于实现AOP
         applicationContext.register(AnnotationAwareAspectJAutoProxyCreator.class);
         applicationContext.refresh();
         MabelTest bean = applicationContext.getBean(MabelTest.class);
