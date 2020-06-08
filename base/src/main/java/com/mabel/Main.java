@@ -11,6 +11,12 @@ import java.util.Map;
  **/
 public class Main {
 
+    private int[] items;
+
+    public Main(int capacity) {
+        items = new int[capacity];
+    }
+
     public static String test() {
         try {
             int i = 1 / 0;
@@ -28,6 +34,6 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        String result = test();
+
     }
 }

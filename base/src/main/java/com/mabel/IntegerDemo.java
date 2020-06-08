@@ -32,6 +32,11 @@ public class IntegerDemo {
     }
 
     public static void main(String[] args) {
-        equalOrNot();
+        try {
+            equalOrNot();
+        } catch (StackOverflowError e) {
+            e.printStackTrace();
+        }
+
     }
 }
