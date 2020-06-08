@@ -16,17 +16,18 @@ public class LongestPalindromeSubString {
             return inputString;
         }
         int length = inputString.length();
-        int maxLength;
         int start = 0;
         int end = 0;
         for (int i = 0; i < length - 1; i++) {
             int oddLength = expand(inputString, i, i);
             int evenLength = expand(inputString, i, i + 1);
-            maxLength = Math.max(oddLength, evenLength);
+            int maxLength = Math.max(oddLength, evenLength);
+            // 新的回文子串长度比原来找到的更大，则修改新回文子串的起止下标
             if (end - start < maxLength) {
                 start = i - (maxLength - 1) / 2;
                 end = i + maxLength / 2;
             }
+
         }
         return inputString.substring(start, end + 1);
     }
@@ -48,8 +49,10 @@ public class LongestPalindromeSubString {
     }
 
     public static void main(String[] args) {
-        String inputString = "aaaaaaaaaaaaaaaaabbaaaaaaaaaaaaa";
+        String inputString = "aaaaaaaaaaaaaaaaabbaaaaaaaaaaaaaaaaa";
+        System.out.println(inputString.length());
         String result = longestPalindrome(inputString);
         System.out.println(result);
+        System.out.println(result.length());
     }
 }
