@@ -5,11 +5,11 @@ import java.util.Set;
 
 /**
  * @project: JavaLearning
- * @description:
+ * @description: 无重复字符的最长子串
  * @author: Mabel.Chen
  * @create: 2019-10-20 10:59
  **/
-public class LongestSubstring {
+public class LongestNoRepeatSubstring {
 
     public int lengthOfLongestSubstring(String s) {
         Set<Character> set = new HashSet<Character>();
@@ -29,7 +29,7 @@ public class LongestSubstring {
     }
 
     public static void main(String[] args) {
-        LongestSubstring longestSubstring = new LongestSubstring();
+        LongestNoRepeatSubstring longestSubstring = new LongestNoRepeatSubstring();
         int longestLength = longestSubstring.lengthOfLongestSubstring("davddf");
         System.out.println(longestLength);
     }
