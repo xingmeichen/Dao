@@ -6,5 +6,7 @@ package com.mabel.proxy;
 public interface Person {
 
     void task();
+
+    void greetingWithName(String name);
 }
 
