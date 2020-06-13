@@ -58,10 +58,65 @@ public class ConvertLyingZ {
         return stringBuilder.toString();
     }
 
+    /**
+     * 该方法的关键在于如何通过字符串的长度和排列行数求得列数,
+     * 目前还有问题，尚未能够通过所有用例
+     * "Apalindromeisaword,phrase,number,orothersequenceofunitsthatcanbereadthesamewayineitherdirection,withgeneralallowancesforadjustmentstopunctuationandworddividers."
+     * 10
+     * 预期输出："A,tsaclmapdpohttsmetaltennarhreiheerilosnodlorornahwioawutiw.iwa,suttadnrajstosnasrefcdyr,endtarrdseeqoaaiewncaouderi,buenenhieerptddoenmecbrettgsouciimuneihfnv"
+     * 实际输出："A,tsaclmapdpohttsmetaltennarhreiheerilosnodlorornahwioawutiwi.wa,suttadnrajstonsasrefcdyr,endtardrseeqoaaiewncaoudrei,buenenhieerptddenmecbrettgsouciimuneihfnv"
+     * */
+    public static String convertV2(String s, int numRows) {
+        if (numRows == 1 || numRows == s.length()) {
+            return s;
+        }
+        // 通过行数量和字符串的长度求列数
+        int more = s.length() % (numRows + numRows - 2);
+        if (0 < more && more <= numRows) {
+            more = 1;
+        } else if (more > numRows) {
+            more = 2;
+        }
+        int column = 0;
+        if (s.length() < numRows) {
+            column = 1;
+        } else if (s.length() / (numRows + numRows - 2) == 0) {
+            column = 1 + s.length() - numRows; // 注意列数的计算
+        } else {
+            column = s.length() / (numRows + numRows - 2) * (numRows - 1) + more; // 注意列数的计算
+        }
+        char[] chars = new char[numRows * column];
+        int index = 0;
+        int i = 0, j = 0;
+        while (index < s.length()) {
+            chars[i * column + j] = s.charAt(index);
+            if (i < numRows) {
+                if (j % (numRows - 1) == 0) {
+                    i++;
+                } else {
+                    i--;
+                    j++;
+                }
+            }
+            if (numRows <= i) {
+                i = i - 2;
+                j++;
+            }
+            index++;
+        }
+        return String.valueOf(chars).replaceAll("\0", "");
+    }
+
     public static void main(String[] args) {
-        String input = "A";
+        String input = "PINALSIGYAHRPI";
         System.out.println("(" + input + ", " + 3 + ")--> " + convert(input, 3));
         System.out.println("(" + input + ", " + 4 + ")--> " + convert(input, 4));
         System.out.println("(" + input + ", " + 5 + ")--> " + convert(input, 5));
+        System.out.println("(" + input + ", " + 15 + ")--> " + convert(input, 15));
+
+//        System.out.println("(" + input + ", " + 3 + ")--> " + convertV2(input, 3));
+//        System.out.println("(" + input + ", " + 4 + ")--> " + convertV2(input, 4));
+//        System.out.println("(" + input + ", " + 5 + ")--> " + convertV2(input, 5));
+        System.out.println("(" + input + ", " + 15 + ")--> " + convertV2(input, 15));
     }
 }
