@@ -10,8 +10,6 @@ import java.util.Objects;
  */
 public class JDKProxy implements InvocationHandler {
 
-    //private static final Logger LOGGER = LoggerFactory.getLogger(JDKProxy.class);
-
     private Object targetObject;
 
     public JDKProxy() {}
@@ -30,18 +28,21 @@ public class JDKProxy implements InvocationHandler {
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         System.out.println("在这里添加增强的前置代码");
+        System.out.println("Before invoke " + method.getName());
         Object object = method.invoke(targetObject, args);
-        System.out.println("[" + method.getName() + "]被调用了");
+        System.out.println("After invoke " + method.getName());
         System.out.println("在这里添加增强的后置代码");
-        System.out.println("-------------------------这是一条分割线-------------------------");
+        System.out.println("**********************  The end of the invoke ************************");
         return object;
     }
 
     public static void main(String[] args) {
         JDKProxy JDKProxy = new JDKProxy();
-        Person targetObject = (Person) JDKProxy.getTargetObject(new Student());
+        Person targetObject = (Person) JDKProxy.getTargetObject(new Teacher());
+        // 下面这行代码执行时候会报错，表明了 JDK动态代理是针对实现了接口类生成代理，而不能针对没有实现接口的类。
+//        Teacher teacher = (Teacher) JDKProxy.getTargetObject(new Teacher());
         targetObject.task();
-        targetObject.task();
+        targetObject.greetingWithName("Mabel");
     }
 }
 
