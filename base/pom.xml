@@ -11,5 +11,13 @@
 
     <artifactId>base</artifactId>
 
+<!--    <dependencies>-->
+<!--        <dependency>-->
+<!--            <groupId>org.w3c.dom</groupId>-->
+<!--            <artifactId>org.w3c.dom.siml</artifactId>-->
+<!--            <version>1.0.1.v200903091627</version>-->
+<!--        </dependency>-->
+<!--    </dependencies>-->
+
 
 </project>
