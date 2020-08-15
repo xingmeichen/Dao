@@ -15,6 +15,7 @@ public class EventListenMain {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext();
         // 注册监听器
+        applicationContext.register(SecondEventListener.class);
         applicationContext.register(MabelEventListener.class);
         applicationContext.refresh();
         // 发布事件

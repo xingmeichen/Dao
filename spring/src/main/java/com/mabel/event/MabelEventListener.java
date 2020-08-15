@@ -14,6 +14,6 @@ public class MabelEventListener implements ApplicationListener<MabelEvent> {
     public void onApplicationEvent(MabelEvent mabelEvent) {
         String message = mabelEvent.getMessage();
         System.out.println("I am ["+ this.getClass().getSimpleName() + "], I am listening [" + MabelEvent.class.getSimpleName() + "]");
-        System.out.println("I get some message, it says" + message);
+        System.out.println("I get some message, it says " + message);
     }
 }
