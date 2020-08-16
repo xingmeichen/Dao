@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
 
 /**
  * @project: JavaLearning
@@ -19,7 +20,14 @@ public class ConfigurationAnnotationDemo {
     private User user;
 
     @Bean
+    @Scope(value = "singleton")
     public User user() {
+        return User.createUser();
+    }
+
+    @Bean
+    @Scope(value = "prototype")
+    public User prototypeUser() {
         return User.createUser();
     }
 
@@ -30,7 +38,7 @@ public class ConfigurationAnnotationDemo {
 
         ConfigurationAnnotationDemo bean = context.getBean(ConfigurationAnnotationDemo.class);
         System.out.println(bean.user == bean.user()); // 结果为true说明 User实例在应用上下文中是全局唯一的
-
+        System.out.println(bean.user == bean.prototypeUser());
         context.close();
     }
 }
