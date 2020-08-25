@@ -1,5 +1,10 @@
 package com.mabel.annotation;
 
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.support.DefaultListableBeanFactory;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
 /**
  * @project:
  * @description:
@@ -10,6 +15,7 @@ package com.mabel.annotation;
 public class AutowiredAnnotationDemo {
 
     public static void main(String[] args) {
-
+        BeanFactory beanFactory = new DefaultListableBeanFactory();
+        ApplicationContext context = new AnnotationConfigApplicationContext();
     }
 }
