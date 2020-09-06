@@ -11,4 +11,14 @@ public class MabelJob {
     public static void main(String[] args) {
         System.out.println("Hello World");
     }
+
+    public synchronized void testSyn() {
+        System.out.println("Hello, I am [testSyn]");
+    }
+
+    public void testSyn(String name) {
+        synchronized (this) {
+            System.out.println("Hello, I am " + name);
+        }
+    }
 }
