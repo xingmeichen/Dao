@@ -12,10 +12,25 @@ import org.springframework.beans.factory.support.BeanDefinitionBuilder;
  **/
 public class BeanDefinitionDemo {
 
-    public static void main(String[] args) {
+    public static BeanDefinition createBeanDefinition() {
         BeanDefinitionBuilder builder = BeanDefinitionBuilder.genericBeanDefinition(User.class);
         builder.addPropertyValue("id", 1000);
         builder.addPropertyValue("name", "Mabel");
-        BeanDefinition beanDefinition = builder.getBeanDefinition();
+        return builder.getBeanDefinition();
+    }
+
+    public static void getDetailOfBeanDefinition() {
+        BeanDefinition beanDefinition = createBeanDefinition();
+        /**
+         * Here, you can try all functions of BD to know more detail about it.
+         * */
+        System.out.println(beanDefinition.getBeanClassName());
+        System.out.println(beanDefinition.getDependsOn());
+        System.out.println(beanDefinition.getDestroyMethodName());
+        System.out.println(beanDefinition.getDescription());
+    }
+
+    public static void main(String[] args) {
+
     }
 }

@@ -1,6 +1,12 @@
 package com.mabel.ioc.metadata;
 
 import com.mabel.domain.User;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
+import org.springframework.beans.factory.support.AutowireCandidateResolver;
+import org.springframework.beans.factory.support.DefaultListableBeanFactory;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,8 +20,12 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class AnnotationBaseConfig {
 
+    @Autowired
+    private User user;
+
     public static void main(String[] args) {
         AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext();
+        getDetailOfMetaData(applicationContext);
         applicationContext.register(AnnotationBaseConfig.class);
         applicationContext.refresh();
         User user = applicationContext.getBean(User.class);
@@ -24,9 +34,29 @@ public class AnnotationBaseConfig {
     }
 
     @Bean
+    @Qualifier("user")
     public User createUser() {
         User user = new User();
         user.setId(10000L).setName("Mabel");
         return user;
+    }
+
+    public static void getDetailOfMetaData(AnnotationConfigApplicationContext applicationContext) {
+        if (null == applicationContext) {
+            return;
+        }
+        ConfigurableListableBeanFactory beanFactory = applicationContext.getBeanFactory();
+        String[] beanNamesForAutowired = beanFactory.getBeanNamesForAnnotation(Autowired.class);
+        if (null != beanNamesForAutowired) {
+            for (String beanName : beanNamesForAutowired) {
+                System.out.println(beanName);
+            }
+        }
+        String[] beanNamesForConfiguration = beanFactory.getBeanNamesForAnnotation(Configuration.class);
+        if (null != beanNamesForConfiguration) {
+            for (String beanName : beanNamesForConfiguration) {
+                System.out.println(beanName);
+            }
+        }
     }
 }
