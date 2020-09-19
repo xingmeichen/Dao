@@ -1,5 +1,7 @@
 package com.mabel.ioc.bean.dependency.circular;
 
+import org.aspectj.lang.annotation.Aspect;
+import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 
@@ -25,7 +27,7 @@ public class CircularReferencesDemo {
         return subject;
     }
 
-    public static void main(String[] args) {
+    public static void disableCircularReference() {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
         context.register(CircularReferencesDemo.class);
 
@@ -43,7 +45,33 @@ public class CircularReferencesDemo {
          * **/
         context.setAllowCircularReferences(false);
         // context.setAllowCircularReferences(true);
+
         context.refresh();
         context.close();
+    }
+
+    /**
+     * Spring 为什么不用二级缓存二是用三级缓存解决循环依赖的问题?
+     */
+    public static void why3ClassCache() {
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
+        context.register(CircularReferencesDemo.class);
+        context.register(AopProxy.class);
+        context.register(LoginService.class);
+        context.setAllowCircularReferences(true); // 事实上，默认值是true，这个设置是多余的
+        context.refresh();
+
+        ConfigurableListableBeanFactory beanFactory = context.getBeanFactory();
+        LoginService bean1 = beanFactory.getBean(LoginService.class);
+        LoginService bean2 = beanFactory.getBean(LoginService.class);
+        System.out.println(bean1);
+        System.out.println(bean2);
+        System.out.println(bean1 == bean2); // true
+
+        context.close();
+    }
+
+    public static void main(String[] args) {
+        why3ClassCache();
     }
 }
