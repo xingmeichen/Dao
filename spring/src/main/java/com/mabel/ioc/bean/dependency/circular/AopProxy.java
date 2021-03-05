@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 public class AopProxy {
 
     @Before("execution(* com.mabel.ioc.bean.dependency.circular.LoginService.login(..))")
-    public void deBefore() {
+    public void doBefore() {
         System.out.println("execute before");
     }
 }

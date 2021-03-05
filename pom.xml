@@ -16,6 +16,7 @@
         <module>spring</module>
         <module>network</module>
         <module>util</module>
+        <module>automation-test</module>
     </modules>
 
     <dependencies>
