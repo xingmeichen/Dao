@@ -1,4 +1,3 @@
-import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -6,7 +5,6 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -53,7 +51,7 @@ public class GoogleTest {
         open("https://www.baidu.com");
         $("#kw").shouldBe(Condition.visible).setValue("Selenide").pressEnter();
         $("#content_left").shouldBe(Condition.visible);
-        SelenideElement first = $$(".result c-container new-pmd").first();
+        SelenideElement first = $$(".result c-container new-pmd").first(); // fail
         first.pressEnter();
     }
 }
