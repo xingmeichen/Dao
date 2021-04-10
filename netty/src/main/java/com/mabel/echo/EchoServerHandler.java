@@ -18,6 +18,8 @@ public class EchoServerHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) {
         ctx.write(msg);
+        ByteBuf in = (ByteBuf) msg;
+        System.out.println((char) in.readByte());
     }
 
     @Override

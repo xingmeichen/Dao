@@ -5,6 +5,8 @@ import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 
+import java.util.Scanner;
+
 /**
  * @project: JavaLearning
  * @description:
@@ -17,20 +19,28 @@ import io.netty.channel.ChannelInboundHandlerAdapter;
 public class EchoClientHandler extends ChannelInboundHandlerAdapter {
 
     private final ByteBuf firstMessage;
+    private final ByteBuf consoleInput;
 
     /**
      * Creates a client-side handler.
      */
     public EchoClientHandler() {
-        firstMessage = Unpooled.buffer(EchoClient.SIZE);
-        for (int i = 0; i < firstMessage.capacity(); i++) {
-            firstMessage.writeByte((byte) i);
+        this.firstMessage = Unpooled.buffer(EchoClient.SIZE);
+        for (int i = 0; i < this.firstMessage.capacity(); i++) {
+            this.firstMessage.writeByte((byte) i);
+        }
+        this.consoleInput = Unpooled.buffer(EchoClient.SIZE);
+        Scanner scanner = new Scanner(System.in);
+        while (scanner.hasNext()) {
+            String next = scanner.next();
+            this.consoleInput.writeBytes(next.getBytes());
         }
     }
 
     @Override
     public void channelActive(ChannelHandlerContext ctx) {
         ctx.writeAndFlush(firstMessage);
+        ctx.writeAndFlush(consoleInput);
     }
 
     @Override
