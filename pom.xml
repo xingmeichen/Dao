@@ -17,6 +17,7 @@
         <module>network</module>
         <module>util</module>
         <module>automation-test</module>
+        <module>netty</module>
     </modules>
 
     <properties>
