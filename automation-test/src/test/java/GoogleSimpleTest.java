@@ -3,6 +3,8 @@ import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import org.junit.Test;
 
+import static com.codeborne.selenide.Selectors.byId;
+import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.*;
 
 /**
@@ -35,5 +37,7 @@ public class GoogleSimpleTest {
         System.out.println("Open start ......");
         open("https://www.baidu.com");
         System.out.println("Open end ......");
+        $("#1");
+        withText("");
     }
 }
