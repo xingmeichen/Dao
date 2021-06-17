@@ -36,7 +36,7 @@ public class StaticOrNot {
         System.out.println("I am a static statement");
     }
 
-    // 为什么会是这一个语句最先执行呢？？
+    // 为什么会是下面这一个语句最先执行呢？？
 
     {
         System.out.println("I am either a static statement, or in main function");

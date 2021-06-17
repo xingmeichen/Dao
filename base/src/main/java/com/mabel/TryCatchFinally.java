@@ -24,8 +24,21 @@ public class TryCatchFinally {
         //return "out of try/catch/finally";
     }
 
+    public static int verifyReturn(int a, int b) {
+        try {
+            return a / b;
+        } catch (Exception e) {
+            System.out.println(e);
+            return -1;
+        } finally {
+            return -2;
+        }
+    }
+
     public static void main(String[] args) {
         String result = test();
         System.out.println(result);
+        int i = verifyReturn(0, 1);
+        System.out.println(i);
     }
 }
