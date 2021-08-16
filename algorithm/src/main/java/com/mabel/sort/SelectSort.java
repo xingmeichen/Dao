@@ -20,24 +20,21 @@ public class SelectSort {
             return list;
         }
         for (int i = 0; i < list.size() - 1; i++) {
-            Integer a = list.get(i);
+            int index = i;
             for (int j = i + 1; j < list.size(); j++) {
                 if (reverse) {
                     // 降序序排序
-                    if (a < list.get(j)) {
-                        a = list.get(j);
-                        list.set(j, list.get(i));
-                        list.set(i, a);
+                    if (list.get(index) < list.get(j)) {
+                        index = j;
                     }
                 } else {
                     // 升序排序
-                    if (a > list.get(j)) {
-                        a = list.get(j);
-                        list.set(j, list.get(i));
-                        list.set(i, a);
+                    if (list.get(index) > list.get(j)) {
+                        index = j;
                     }
                 }
             }
+            SwapUtil.swap(list, i, index);
         }
         return list;
     }
@@ -47,7 +44,7 @@ public class SelectSort {
         SelectSort selectSort = new SelectSort();
         System.out.print("befor sorting: ");
         PrintUtil.printList(list);
-        selectSort.sort(list, true);
+        selectSort.sort(list, false);
         System.out.print("after sorting: ");
         PrintUtil.printList(list);
     }

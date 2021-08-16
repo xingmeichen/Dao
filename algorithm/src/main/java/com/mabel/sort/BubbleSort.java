@@ -19,21 +19,19 @@ public class BubbleSort {
         if (CollectionUtils.isEmpty(list)) {
             return list;
         }
-        for (int i = list.size() - 1; 0 < i; i--) {
-            for (int j = 0; j < i; j++) {
+        /** 外层循环表示需要遍历的次数，内层循环表示在尚未有序的序列中找到最大/最小值，
+         * 每一次内层循环结束后，有序序列长度加1 */
+        for (int i = 0; i < list.size() - 1; i++) {
+            for (int j = 0; j < list.size() - 1 - i; j++) {
                 if (reverse) {
                     // 降序排序
                     if (list.get(j) < list.get(j+1)) {
-                        int a = list.get(j);
-                        list.set(j, list.get(j+1));
-                        list.set(j+1, a);
+                        SwapUtil.swap(list, j, j+1);
                     }
                 } else {
                     // 升序排序
                     if (list.get(j) > list.get(j+1)) {
-                        int a = list.get(j);
-                        list.set(j, list.get(j+1));
-                        list.set(j+1, a);
+                        SwapUtil.swap(list, j, j+1);
                     }
                 }
             }
@@ -44,9 +42,9 @@ public class BubbleSort {
     public static void main(String[] args) {
         List list = Arrays.asList(1,2,3,4,6,1,4,7,9,1);
         BubbleSort bubbleSort = new BubbleSort();
-        System.out.print("befor sorting: ");
+        System.out.print("before sorting: ");
         PrintUtil.printList(list);
-        bubbleSort.sort(list, true);
+        bubbleSort.sort(list, false);
         System.out.print("after sorting: ");
         PrintUtil.printList(list);
     }

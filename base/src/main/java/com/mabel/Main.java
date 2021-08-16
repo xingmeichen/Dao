@@ -1,5 +1,11 @@
 package com.mabel;
 
+import java.nio.ByteBuffer;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
 /**
  * @project: JavaLearning
  * @description:
@@ -30,7 +36,19 @@ public class Main {
         //return "out of try/catch/finally";
     }
 
-    public static void main(String[] args) {
-        System.out.println(args.length);
+    public static void main(String[] args) throws Exception {
+//        System.out.println(args.length);
+        System.out.println(new Date());
+        Date now = new Date();
+        DateFormat format = new SimpleDateFormat();
+        String formatedDate = format.format(now);
+        System.out.println(formatedDate);
+        String s = now.toString();
+        System.out.println(s);
+        String dateStr = "2021-07-05T10:07:45.000+0000";
+        //输入的被转化的时间格式
+        SimpleDateFormat dff = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS", Locale.ENGLISH);
+        Date date1 = dff.parse(dateStr);
+        System.out.println(date1);
     }
 }
