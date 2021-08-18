@@ -47,7 +47,7 @@ public class TicketCallable implements Callable<Integer> {
         System.out.println("Starting " +  this.name );
         if (thread == null) {
             thread = new Thread(futureTask, this.name);
-            thread.start ();
+            thread.start();
         }
     }
 

@@ -60,7 +60,7 @@ public class TicketThread extends Thread {
         }
     }
 
-    public void testSlep() throws Exception {
+    public void testSleep() throws Exception {
         synchronized (lockObj) {
             System.out.println("testSleep start");
             sleep(10000); // 它不会释放锁
@@ -75,6 +75,6 @@ public class TicketThread extends Thread {
         ticketThread1.start();
         ticketThread2.start();
         ticketThread1.testJoin();
-        ticketThread2.testSlep();
+        ticketThread2.testSleep();
     }
 }
