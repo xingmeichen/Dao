@@ -19,6 +19,8 @@
         <module>automation-test</module>
         <module>netty</module>
         <module>grpc</module>
+        <module>redis</module>
+        <module>datastructure</module>
     </modules>
 
     <properties>

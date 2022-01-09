@@ -9,6 +9,5 @@ package com.mabel;
 public class ThreadCommunication {
 
     public static void main(String[] args) {
-
     }
 }
