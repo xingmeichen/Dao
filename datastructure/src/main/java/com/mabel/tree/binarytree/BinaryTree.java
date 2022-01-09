@@ -76,8 +76,7 @@ public class BinaryTree {
      * 二叉树的层次遍历
      * 根入队列，根出队列，并且左右孩子如队列
      */
-    public void layerOrderIterate(BinaryTreeNode root) {
-        System.out.println(root.getData());
+    public void layerOrderTraversal(BinaryTreeNode root) {
         Queue<BinaryTreeNode> queue = new ConcurrentLinkedDeque();
         queue.add(root);
         while (0 < queue.size()) {
@@ -92,9 +91,46 @@ public class BinaryTree {
         }
     }
 
-    public void rootFirstIterate(BinaryTreeNode root) {
-
+    /***
+     * 先序遍历： 根左右
+     * @param node
+     */
+    public void preorderTraversal(BinaryTreeNode node) {
+        if (null == node) {
+            return;
+        }
+        print(node.getData());
+        preorderTraversal(node.getLeft());
+        preorderTraversal(node.getRight());
     }
+
+    /***
+     * 中序遍历： 左根右
+     * @param node
+     */
+    public void inOrderTraversal(BinaryTreeNode node) {
+        if (null == node) {
+            return;
+        }
+        inOrderTraversal(node.getLeft());
+        print(node.getData());
+        inOrderTraversal(node.getRight());
+    }
+
+    /***
+     * 后序遍历： 左右根
+     * @param node
+     */
+    public void postOrderTraversal(BinaryTreeNode node) {
+        if (null == node) {
+            return;
+        }
+        postOrderTraversal(node.getLeft());
+        postOrderTraversal(node.getRight());
+        print(node.getData());
+    }
+
+
 
     public void print(Object o) {
         System.out.print(o + " ");
@@ -108,6 +144,18 @@ public class BinaryTree {
             node.setData(item);
             tree.insert(node);
         });
-        tree.layerOrderIterate(root);
+        System.out.print("层次遍历： ");
+        tree.layerOrderTraversal(root);
+
+        System.out.print("\n前序遍历： ");
+        tree.preorderTraversal(root);
+
+        System.out.print("\n中序遍历： ");
+        tree.inOrderTraversal(root);
+
+        System.out.print("\n后序遍历： ");
+        tree.postOrderTraversal(root);
+
+        System.out.println("\n");
     }
 }
