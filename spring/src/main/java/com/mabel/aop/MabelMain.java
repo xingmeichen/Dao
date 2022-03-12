@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
  * @create: 2020-05-10 09:54
  **/
 @Component
-public class MabelTest {
+public class MabelMain {
 
     @MabelAop
     public void testAspect() {
@@ -22,18 +22,18 @@ public class MabelTest {
 
     public static void loadByXml() {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:/META-INF/aop.xml");
-        MabelTest bean = applicationContext.getBean(MabelTest.class);
+        MabelMain bean = applicationContext.getBean(MabelMain.class);
         bean.testAspect();
     }
 
     public static void loadByAnnotation() {
         AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext();
         applicationContext.register(MabelAspect.class);
-        applicationContext.register(MabelTest.class);
+        applicationContext.register(MabelMain.class);
         // 需要注册 AnnotationAwareAspectJAutoProxyCreator 用于实现AOP
         applicationContext.register(AnnotationAwareAspectJAutoProxyCreator.class);
         applicationContext.refresh();
-        MabelTest bean = applicationContext.getBean(MabelTest.class);
+        MabelMain bean = applicationContext.getBean(MabelMain.class);
         bean.testAspect();
         applicationContext.close();
     }

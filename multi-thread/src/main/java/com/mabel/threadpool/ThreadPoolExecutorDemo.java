@@ -1,5 +1,6 @@
 package com.mabel.threadpool;
 
+import com.mabel.ticket.TicketCallable;
 import com.mabel.ticket.TicketThread;
 
 import java.util.concurrent.*;
@@ -12,7 +13,7 @@ import java.util.concurrent.*;
  **/
 public class ThreadPoolExecutorDemo {
 
-    public static void main(String[] args) {
+    public static void threadPoolDemo() {
         // Executors 工具类实际上还是通过 ThreadPoolExecutor 的构造方法去创建的线程池
         Executor executor = Executors.newCachedThreadPool();
         ThreadFactory threadFactory = Executors.defaultThreadFactory();
@@ -20,5 +21,23 @@ public class ThreadPoolExecutorDemo {
             Thread thread = threadFactory.newThread(new TicketThread("Thread_" + i));
             executor.execute(thread);
         }
+    }
+
+    public static void executorServiceSubmitDemo() {
+        ExecutorService executorService = Executors.newFixedThreadPool(5);
+        Future<Integer> a = executorService.submit(new TicketCallable("A"));
+        try {
+            Integer result = a.get();
+            System.out.println(result);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void main(String[] args) {
+        threadPoolDemo();
+        executorServiceSubmitDemo();
     }
 }

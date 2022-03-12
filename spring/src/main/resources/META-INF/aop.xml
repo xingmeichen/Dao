@@ -9,5 +9,5 @@
 
     <aop:aspectj-autoproxy />
     <bean class="com.mabel.aop.MabelAspect"/>
-    <bean class="com.mabel.aop.MabelTest"/>
+    <bean class="com.mabel.aop.MabelMain"/>
 </beans>
