@@ -3,7 +3,8 @@ package com.mabel.singleton;
 /**
  * @project: JavaLearning
  * @description:
- * 饿汉式
+ * 饿汉式： 非懒加载
+ *
  * @author: Mabel.Chen
  * @create: 2021-01-30 16:41
  **/
