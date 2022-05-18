@@ -31,7 +31,7 @@ public class FileUtil {
             fileOutputStream = new FileOutputStream(new File(absolutePath + "/a.txt"));
             int i = 1;
             while (i <= 5) {
-                String content = "第" + i + "行：这是简单的一个文件内容";
+                String content = "第" + i + "行：这是简单的一个文件内容\n";
                 fileOutputStream.write(content.getBytes());
                 i++;
             }
@@ -74,6 +74,7 @@ public class FileUtil {
             }
         } catch (Exception e) {
             LOGGER.error("open file reader error", e);
+            throw new RuntimeException(e.getMessage());
         } finally {
             IOUtils.closeQuietly(reader);
         }
@@ -81,6 +82,6 @@ public class FileUtil {
 
     public static void main(String[] args) {
         writeFile();
-        readFileByReader("/Users/chenxingmei/Documents/mabel_repository/JavaLearning/tmp/a.txt");
+        readFileByReader(System.getProperty("user.dir") + "/tmp/a.txt");
     }
 }
