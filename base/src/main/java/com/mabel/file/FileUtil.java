@@ -1,4 +1,4 @@
-package com.mabel.stream;
+package com.mabel.file;
 
 import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;

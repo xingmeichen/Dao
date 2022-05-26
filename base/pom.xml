@@ -10,14 +10,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>base</artifactId>
-
-<!--    <dependencies>-->
-<!--        <dependency>-->
-<!--            <groupId>org.w3c.dom</groupId>-->
-<!--            <artifactId>org.w3c.dom.siml</artifactId>-->
-<!--            <version>1.0.1.v200903091627</version>-->
-<!--        </dependency>-->
-<!--    </dependencies>-->
-
-
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.11</version>
+        </dependency>
+    </dependencies>
 </project>
