@@ -9,7 +9,7 @@
         <property name="fileEncoding" value="UTF-8"></property>
     </bean>
 
-    <bean id="user" class="com.mabel.domain.User">
+    <bean id="user" class="com.dao.domain.User">
         <property name="id" value="${user.id}"></property>
         <property name="name" value="${user.name}"></property>
     </bean>
