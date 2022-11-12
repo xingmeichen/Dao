@@ -17,8 +17,8 @@ public class MabelAspect {
     /**
      * 定义切点 （也叫切入点 Pointcut）
      * */
-    @Pointcut("execution(public * com.mabel..*.*(..)) && @annotation(com.mabel.aop.MabelAop)")
-//    @Pointcut("@annotation(com.mabel.aop.MabelAop)")
+    @Pointcut("execution(public * com.dao..*.*(..)) && @annotation(com.dao.aop.MabelAop)")
+//    @Pointcut("@annotation(com.dao.aop.MabelAop)")
     public void mabelPointcut() {
         System.out.println("什么也不做吗？");
     }

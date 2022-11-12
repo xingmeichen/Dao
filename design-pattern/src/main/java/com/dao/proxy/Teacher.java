@@ -20,7 +20,7 @@ public class Teacher implements Person {
     /**
      * 私有方法没有办法被增强，因为JDK动态代理是针对实现了接口类生成代理，而不能针对没有实现接口的类，
      * 比如 Teacher targetObject = (Teacher) JDKProxy.getTargetObject(new Teacher()); 执行的时候将会报错
-     * Exception in thread "main" java.lang.ClassCastException: com.sun.proxy.$Proxy0 cannot be cast to com.mabel.proxy.Teacher
+     * Exception in thread "main" java.lang.ClassCastException: com.sun.proxy.$Proxy0 cannot be cast to com.dao.proxy.Teacher
      * */
     private void greeting() {
         System.out.println("Hello, nice to meet you.");

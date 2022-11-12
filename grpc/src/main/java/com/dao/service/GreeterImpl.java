@@ -1,6 +1,6 @@
-//package com.mabel.service;
+//package com.dao.service;
 //
-//import com.mabel.helloworld.GreeterGrpc;
+//import com.dao.helloworld.GreeterGrpc;
 //
 ///**
 // * @project: JavaLearning

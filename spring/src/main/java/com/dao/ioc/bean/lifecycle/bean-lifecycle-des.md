@@ -1,4 +1,4 @@
-## com.mabel.ioc.bean.lifecycle 这个包下介绍Spring Bean的生命周期
+## com.dao.ioc.bean.lifecycle 这个包下介绍Spring Bean的生命周期
 
 ### Spring 元信息配置
 1. 基于xml文件或者property文件的配置

@@ -13,7 +13,7 @@ import java.lang.reflect.Method;
 public class TargetFilterDemo {
 
     public static void main(String[] args) throws ClassNotFoundException {
-        String targetClassName = "com.mabel.aop.overview.EchoService";
+        String targetClassName = "com.dao.aop.overview.EchoService";
         ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
         Class<?> targetClass = classLoader.loadClass(targetClassName);
         Method targetMethod = ReflectionUtils.findMethod(targetClass, "echo", String.class);

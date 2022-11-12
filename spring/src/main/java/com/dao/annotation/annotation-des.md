@@ -1,4 +1,4 @@
-## com.mabel.ioc.annotation 这个包下介绍注解
+## com.dao.ioc.annotation 这个包下介绍注解
 ### 用于配置元信息的注解
 1. @Component @Repository @Service @Controller @ RestController
 2. @Configuration 
