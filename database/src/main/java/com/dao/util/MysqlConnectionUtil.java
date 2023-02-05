@@ -74,6 +74,75 @@ public class MysqlConnectionUtil {
         mysqlConn.closeConnection();
     }
 
+    public static void insertPre() throws Exception {
+        String sql = "insert into t1 (name) values (\"user1\"), (\"user2\"), (\"user3\")";
+        MysqlConnection mysqlConn = new MysqlConnection();
+        try {
+            mysqlConn.preStatement = mysqlConn.connection.prepareStatement(sql);
+            ParameterMetaData parameterMetaData = mysqlConn.preStatement.getParameterMetaData();
+            mysqlConn.preStatement.execute();
+        } catch (Exception e) {
+            throw e;
+        } finally {
+            closeConnection(mysqlConn);
+        }
+    }
+
+    public static void insert() throws Exception {
+        String sql = "insert into t1 (name) values (\"user1\"), (\"user2\"), (\"user3\"); drop table t1;";
+        MysqlConnection mysqlConn = new MysqlConnection();
+        try {
+            mysqlConn.statement.execute(sql);
+        } catch (Exception e) {
+            throw e;
+        } finally {
+            closeConnection(mysqlConn);
+        }
+    }
+
+    public static void update() throws Exception {
+        String name = "user1'; drop table t1 -- 'a";
+        String sql = "delete from t1 where name = '" +  name + "'";
+        MysqlConnection mysqlConn = new MysqlConnection();
+        try {
+            mysqlConn.preStatement = mysqlConn.connection.prepareStatement(sql);
+            LOGGER.info("SQL: {}", sql);
+            mysqlConn.preStatement.execute();
+        } catch (Exception e) {
+            throw e;
+        } finally {
+            closeConnection(mysqlConn);
+        }
+    }
+
+    public static void updatePre() throws Exception {
+        String name = "user1; drop table t1";
+        String sql = "delete from t1 where name = ?";
+        MysqlConnection mysqlConn = new MysqlConnection();
+        try {
+            mysqlConn.preStatement = mysqlConn.connection.prepareStatement(sql);
+            mysqlConn.preStatement.setString(1, name);
+            LOGGER.info("SQL: {}", sql);
+            mysqlConn.preStatement.execute();
+        } catch (Exception e) {
+            throw e;
+        } finally {
+            closeConnection(mysqlConn);
+        }
+    }
+
+    public static void dropTable() throws Exception {
+        String sql = "drop table t1";
+        MysqlConnection mysqlConn = new MysqlConnection();
+        try {
+            mysqlConn.statement.execute(sql);
+        } catch (Exception e) {
+            throw e;
+        } finally {
+            closeConnection(mysqlConn);
+        }
+    }
+
     public static void main(String[] args) throws Exception {
         MysqlConnection mysqlConn = new MysqlConnection();
         String sql = "select * from t1";

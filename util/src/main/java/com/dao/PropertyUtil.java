@@ -1,5 +1,7 @@
 package com.dao;
 
+import java.util.Properties;
+
 /**
  * @project: JavaLearning
  * @description:
@@ -8,5 +10,9 @@ package com.dao;
  **/
 public class PropertyUtil {
 
-
+    public static Properties loadPropertyInClasspath(String file) throws Exception {
+        Properties properties = new Properties();
+        properties.load(PropertyUtil.class.getResourceAsStream(file));
+        return properties;
+    }
 }
