@@ -5,7 +5,7 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description: JDK动态代理示例
  * @author: Mabel.Chen
  * @create: 2021-01-09 13:48

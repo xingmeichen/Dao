@@ -7,7 +7,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Component;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description:
  * @author: Mabel.Chen
  * @create: 2020-05-10 09:54

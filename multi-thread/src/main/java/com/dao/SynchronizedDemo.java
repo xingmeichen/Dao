@@ -1,7 +1,7 @@
 package com.dao;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description:
  * synchronized 关键字示例
  * synchronized 是对对象加锁，而如果是在声明方法上用了该关键字，说明是对当前对象加锁

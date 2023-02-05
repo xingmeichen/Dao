@@ -5,7 +5,7 @@ import org.springframework.beans.factory.InitializingBean;
 import javax.annotation.PostConstruct;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description:
  * @author: Mabel.Chen
  * @create: 2020-02-15 16:12

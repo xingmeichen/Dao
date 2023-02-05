@@ -1,7 +1,7 @@
 package com.dao.singleton;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description:
  * 枚举类实现方式：线程安全，调用效率高，不能延时加载，可以天然防止反射和序列化调用
  * @author: Mabel.Chen

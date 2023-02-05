@@ -6,7 +6,7 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description: Handler implementation for the echo server.
  * @author: Mabel.Chen
  * @create: 2021-04-10 16:53

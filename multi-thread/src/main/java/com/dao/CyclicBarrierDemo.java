@@ -3,7 +3,7 @@ package com.dao;
 import java.util.concurrent.CyclicBarrier;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description:
  * 用CyclicBarrier 模拟每三人一组乘车的场景
  * @author: Mabel.Chen

@@ -1,7 +1,7 @@
 package com.dao.number;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description: 求一个数量是否为奇数的示例
  * @author: Mabel.Chen
  * @create: 2020-05-16 10:35

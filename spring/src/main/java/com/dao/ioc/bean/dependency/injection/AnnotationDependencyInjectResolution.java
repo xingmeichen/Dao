@@ -14,7 +14,7 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description: 基于注解的依赖注入的处理过程示例
  * （也就是说Spring它具体是如何处理基于注解依赖注入的）
  * @author: Mabel.Chen

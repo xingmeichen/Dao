@@ -5,7 +5,7 @@ import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.support.BeanDefinitionBuilder;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description:
  * @author: Mabel.Chen
  * @create: 2020-02-14 16:26

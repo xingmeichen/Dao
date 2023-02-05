@@ -1,7 +1,7 @@
 package com.dao.singleton;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description:
  * 静态内部类实现
  * @author: Mabel.Chen

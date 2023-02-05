@@ -13,7 +13,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import java.util.Map;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description: 理解Bean的作用域
  * 结论：
  * 1、Singleton Bean, 无论是依赖查找还是依赖注入, 均为同一个对象

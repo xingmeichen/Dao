@@ -16,7 +16,7 @@ import io.netty.handler.ssl.SslContextBuilder;
 import io.netty.handler.ssl.util.SelfSignedCertificate;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description:
  * Echoes back any received data from a client.
  * @author: Mabel.Chen

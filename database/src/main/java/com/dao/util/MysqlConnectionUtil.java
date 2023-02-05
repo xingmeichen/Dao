@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import java.sql.*;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description:
  * @author: Mabel.Chen
  * @create: 2022-11-12

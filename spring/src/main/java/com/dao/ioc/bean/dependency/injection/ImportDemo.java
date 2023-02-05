@@ -5,7 +5,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.annotation.Import;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description: {@link Import} 示例
  * @author: Mabel.Chen
  * @create: 2020-09-06 22:28

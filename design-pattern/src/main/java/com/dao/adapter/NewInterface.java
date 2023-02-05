@@ -1,7 +1,7 @@
 package com.dao.adapter;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description:
  * @author: Mabel.Chen
  * @create: 2021-11-20 10:25

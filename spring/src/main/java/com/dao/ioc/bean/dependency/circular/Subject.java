@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.util.Collection;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description: 学科类
  * @author: Mabel.Chen
  * @create: 2020-02-13 15:46

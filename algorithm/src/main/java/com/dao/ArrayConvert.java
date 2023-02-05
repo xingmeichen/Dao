@@ -1,7 +1,7 @@
 package com.dao;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description:
  * 数组变换
  * 给出一个长度为 n 的数组，和一个正整数 d。

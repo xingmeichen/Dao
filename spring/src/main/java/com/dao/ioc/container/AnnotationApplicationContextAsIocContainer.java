@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Configuration;
 import java.util.Map;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description:
  * @author: Mabel.Chen
  * @create: 2020-02-14 15:13

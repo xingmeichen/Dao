@@ -4,7 +4,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description:
  * testng configuration:
  * testng.xml

@@ -3,7 +3,7 @@ package com.dao;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description: 证明 AtomicXX 比synchronized快
  * @author: Mabel.Chen
  * @create: 2020-09-19 19:23

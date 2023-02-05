@@ -6,7 +6,7 @@ import java.util.Set;
 import java.util.concurrent.LinkedBlockingQueue;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description:
  * @author: Mabel.Chen
  * @create: 2019-11-16 13:33

@@ -5,7 +5,7 @@ import org.aspectj.lang.annotation.*;
 import org.springframework.stereotype.Component;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description:  这是一个切面
  * @author: Mabel.Chen
  * @create: 2020-05-10 09:36

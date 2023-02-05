@@ -3,7 +3,7 @@ package com.dao.condition;
 import org.springframework.context.annotation.*;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description: // TODO
  * @author: Mabel.Chen
  * @create: 2020-09-03 08:22

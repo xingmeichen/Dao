@@ -1,7 +1,7 @@
 package com.dao;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description:
  * @see {@link java.util.concurrent.Phaser} 示例
  * @author: Mabel.Chen

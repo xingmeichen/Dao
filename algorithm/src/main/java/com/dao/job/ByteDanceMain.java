@@ -1,7 +1,7 @@
 package com.dao.job;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description: （这是最粗暴的解法了，但是除了这个没有想到其他的了）
  * 题目是：
  * 字节跳动在北京有N个工区，形成一个环状，Bytebus是往返在各个工区的通勤车，

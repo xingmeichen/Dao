@@ -5,7 +5,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.annotation.Bean;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description: 循环引用（循环依赖）示例
  * @author: Mabel.Chen
  * @create: 2020-08-15 19:32

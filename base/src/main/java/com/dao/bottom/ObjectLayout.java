@@ -6,7 +6,7 @@ import org.openjdk.jol.info.ClassLayout;
 import java.util.Date;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description: 对象内存布局示例
  * @author: Mabel.Chen
  * @create: 2020-04-18 11:46

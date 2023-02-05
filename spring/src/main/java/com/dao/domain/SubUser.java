@@ -3,7 +3,7 @@ package com.dao.domain;
 import lombok.Data;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description:
  * @author: Mabel.Chen
  * @create: 2020-02-14 10:47

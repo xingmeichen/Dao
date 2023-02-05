@@ -6,7 +6,7 @@ import org.springframework.beans.factory.support.BeanDefinitionBuilder;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description: 基于Java Api的元数据配置
  * @author: Mabel.Chen
  * @create: 2020-02-10 18:00

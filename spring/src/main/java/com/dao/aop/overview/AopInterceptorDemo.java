@@ -5,7 +5,7 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description: 拦截器示例
  * @author: Mabel.Chen
  * @create: 2021-01-09 14:14

@@ -1,7 +1,7 @@
 package com.dao.singleton;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description:
  * 饿汉式： 非懒加载
  *

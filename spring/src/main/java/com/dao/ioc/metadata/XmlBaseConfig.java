@@ -16,7 +16,7 @@ import com.dao.util.UserFactory;
 import java.util.Map;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description: 基与xml文件的元数据配置
  * @author: Mabel.Chen
  * @create: 2020-02-08 20:50

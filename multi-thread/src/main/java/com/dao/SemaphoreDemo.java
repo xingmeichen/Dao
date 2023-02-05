@@ -3,7 +3,7 @@ package com.dao;
 import java.util.concurrent.Semaphore;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description:
  * @see {@link java.util.concurrent.Semaphore} 示例
  * 使用场景：限流，限制同时只能有设定数量的线程在运行

@@ -1,7 +1,7 @@
 package com.dao.adapter;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description: 适配器模式的调用
  * @author: Mabel.Chen
  * @create: 2021-11-20 10:28

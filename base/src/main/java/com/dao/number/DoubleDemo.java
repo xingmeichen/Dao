@@ -1,7 +1,7 @@
 package com.dao.number;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description: double类型可能出现的问题
  * @author: Mabel.Chen
  * @create: 2020-05-16 10:56

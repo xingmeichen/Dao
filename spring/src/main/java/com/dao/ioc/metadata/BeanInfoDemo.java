@@ -9,7 +9,7 @@ import java.beans.Introspector;
 import java.util.stream.Stream;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description:
  * @author: Mabel.Chen
  * @create: 2020-01-04 09:32

@@ -1,7 +1,7 @@
 package com.dao.codeExecuteOrder;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description: 类加载机制的印证
  * @author: Mabel.Chen
  * @create: 2021-05-30 16:16

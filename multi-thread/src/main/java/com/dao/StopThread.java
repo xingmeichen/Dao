@@ -1,7 +1,7 @@
 package com.dao;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description: 该方法说明了即使是处于休眠状态的线程也能接收到interrupt（中断）信号，而不是等到休眠结束
  * @author: Mabel.Chen
  * @create: 2021-09-06 18:55

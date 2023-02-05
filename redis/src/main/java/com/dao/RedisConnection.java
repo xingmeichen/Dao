@@ -2,7 +2,7 @@ package com.dao;
 
 import redis.clients.jedis.Jedis;
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description:
  * @author: Mabel.Chen
  * @create: 2021-12-29 09:55

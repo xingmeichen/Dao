@@ -3,7 +3,7 @@ package com.dao;
 import java.util.Properties;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description:
  * @author: Mabel.Chen
  * @create: 2022-11-12

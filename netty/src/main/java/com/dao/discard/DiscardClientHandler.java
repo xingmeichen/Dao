@@ -1,7 +1,7 @@
 package com.dao.discard;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description:
  * Handles a client-side channel
  * @author: Mabel.Chen

@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.*;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description: 这个demo说明，Selenide不需要显示地加载设置WebDriver, 也不需要显示地关闭浏览器，
  * 这些都是Selenide自动完成的
  * github of Selenide: https://github.com/selenide/selenide

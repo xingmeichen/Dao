@@ -3,7 +3,7 @@ package com.dao.ioc.bean.dependency.circular;
 import org.springframework.stereotype.Service;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description:
  * @author: Mabel.Chen
  * @create: 2020-09-17 00:05

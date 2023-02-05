@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description: 冒泡排序，
  * 假设原无序序列长度是N, 总共需要遍历N-1次，遍历一次后无序序列长度减1，有序序列长度增1，每次遍历比较的次数是无序序列长度。
  * 以下方法排序中，有序序列由链表尾向链表头增长

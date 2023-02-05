@@ -1,7 +1,7 @@
 package com.dao.domain;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description:
  * @author: Mabel.Chen
  * @create: 2020-02-10 13:51

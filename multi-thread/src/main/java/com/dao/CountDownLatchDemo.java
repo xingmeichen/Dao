@@ -3,7 +3,7 @@ package com.dao;
 import java.util.concurrent.CountDownLatch;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description:
  * @author: Mabel.Chen
  * @create: 2021-09-11 11:38

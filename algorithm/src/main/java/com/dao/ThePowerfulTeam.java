@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description:
  * 求最强团队
  * 有一个阵营，里面有 n 个小队 (1<=n<=100)，每个小队都有他们的能力值 ai(0<=i

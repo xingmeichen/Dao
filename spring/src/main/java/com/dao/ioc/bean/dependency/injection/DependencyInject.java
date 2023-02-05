@@ -7,7 +7,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description: 依赖注入
  * @author: Mabel.Chen
  * @create: 2020-02-14 11:30

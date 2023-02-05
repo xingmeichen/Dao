@@ -1,7 +1,7 @@
 package com.dao;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description:
  * 用三个线程分别打印出A,B,C, 要求每个字母打印10次，且按ABC这样的顺序交替打印
  * @author: Mabel.Chen

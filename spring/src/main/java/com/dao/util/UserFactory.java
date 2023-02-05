@@ -4,7 +4,7 @@ import com.dao.domain.Person;
 import com.dao.domain.User;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description:
  * @author: Mabel.Chen
  * @create: 2020-02-13 10:41

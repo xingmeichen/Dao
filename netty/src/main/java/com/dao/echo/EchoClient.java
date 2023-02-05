@@ -14,7 +14,7 @@ import io.netty.handler.ssl.SslContextBuilder;
 import io.netty.handler.ssl.util.InsecureTrustManagerFactory;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description:
  * Sends one message when a connection is open and echoes back any received
  * data to the server.  Simply put, the echo client initiates the ping-pong

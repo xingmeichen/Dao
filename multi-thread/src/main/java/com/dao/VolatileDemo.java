@@ -1,7 +1,7 @@
 package com.dao;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description: 证明 volatile 的可见性
  * @author: Mabel.Chen
  * @create: 2020-09-19 18:40

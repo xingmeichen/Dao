@@ -6,7 +6,7 @@ import com.dao.ticket.TicketThread;
 import java.util.concurrent.*;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description: 线程池使用示例
  * @author: Mabel.Chen
  * @create: 2020-03-06 10:54

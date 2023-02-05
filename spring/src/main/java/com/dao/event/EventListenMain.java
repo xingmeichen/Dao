@@ -3,7 +3,7 @@ package com.dao.event;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description:
  * @author: Mabel.Chen
  * @create: 2020-08-09 14:34

@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description: 选择排序的实现，选择排序是乱序排序
  * 选择排序就是从没有排序的元素中选择出最大或者最小的元素放到已经排序好的元素后面，
  * 以下方法排序中，有序序列由链表尾向链表头增长

@@ -13,7 +13,7 @@ import utils.DriverUtil;
 import static com.codeborne.selenide.Selenide.*;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description: use Selenide to do Google search
  * {@link }
  * @author: Mabel.Chen

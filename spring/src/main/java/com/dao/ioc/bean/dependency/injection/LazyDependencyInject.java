@@ -9,7 +9,7 @@ import org.springframework.beans.factory.support.BeanDefinitionBuilder;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description: 延时注入示例
  * @author: Mabel.Chen
  * @create: 2020-02-16 11:48

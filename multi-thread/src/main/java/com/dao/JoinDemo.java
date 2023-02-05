@@ -1,7 +1,7 @@
 package com.dao;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description:
  * join() 方法示例
  * 假设有两个线程，t1 和 t2, 在t1 中调用 t2.join()，

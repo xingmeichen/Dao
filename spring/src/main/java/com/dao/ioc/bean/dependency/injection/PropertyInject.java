@@ -7,7 +7,7 @@ import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description: 通过字段注入的方式完成依赖注入
  * @author: Mabel.Chen
  * @create: 2020-02-13 11:41

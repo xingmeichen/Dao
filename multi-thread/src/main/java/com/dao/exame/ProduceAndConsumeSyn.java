@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description: 写一个固定容量同步容器，拥有put 和 get 方法，以及 getCount 方法，
  * 能够支持2个生产者线程以及10个消费者线程的阻塞调用。
  *

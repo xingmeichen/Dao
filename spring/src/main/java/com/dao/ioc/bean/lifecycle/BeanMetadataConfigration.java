@@ -9,7 +9,7 @@ import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.EncodedResource;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description: Bean 元信息配置
  * @author: Mabel.Chen
  * @create: 2020-03-08 11:14

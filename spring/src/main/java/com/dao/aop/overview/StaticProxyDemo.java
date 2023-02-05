@@ -1,7 +1,7 @@
 package com.dao.aop.overview;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description: 静态代理示例
  * 静态代理通过继承和组合的方式实现
  * @author: Mabel.Chen

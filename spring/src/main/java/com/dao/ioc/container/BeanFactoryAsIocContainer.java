@@ -4,7 +4,7 @@ import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description: Ioc 容器
  * @author: Mabel.Chen
  * @create: 2020-02-14 15:06

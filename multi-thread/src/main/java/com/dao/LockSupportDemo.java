@@ -3,7 +3,7 @@ package com.dao;
 import java.util.concurrent.locks.LockSupport;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description:
  * @see {@link java.util.concurrent.locks.LockSupport} 示例
  * @author: Mabel.Chen

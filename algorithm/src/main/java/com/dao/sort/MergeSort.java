@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description: 归并排序
  * @author: Mabel.Chen
  * @create: 2021-08-15 15:21

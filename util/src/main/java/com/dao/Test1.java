@@ -3,7 +3,7 @@ package com.dao;
 import java.util.Scanner;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description: 求一个数是是两个素数的乘积
  * @author: Mabel.Chen
  * @create: 2022-02-25 18:51

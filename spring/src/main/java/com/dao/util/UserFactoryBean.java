@@ -4,7 +4,7 @@ import com.dao.domain.User;
 import org.springframework.beans.factory.FactoryBean;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description: {@link org.springframework.beans.factory.FactoryBean}
  * @author: Mabel.Chen
  * @create: 2020-02-15 10:39

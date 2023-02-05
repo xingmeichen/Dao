@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.ServiceLoader;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description: Bean的实例化示例
  * @author: Mabel.Chen
  * @create: 2020-02-13 10:35

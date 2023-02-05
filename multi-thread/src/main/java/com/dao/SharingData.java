@@ -1,7 +1,7 @@
 package com.dao;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description: 对共享数据的操作需要考虑到线程安全问题
  * @author: Mabel.Chen
  * @create: 2021-07-04 20:01

@@ -7,7 +7,7 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.io.Resource;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description: 外部化配置作为依赖来源示例
  * 注意事项：
  * 1、在类上使用@Configuration必不可少

@@ -10,7 +10,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import java.util.Map;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description:  依赖查找
  * @author: Mabel.Chen
  * @create: 2020-02-13 12:15

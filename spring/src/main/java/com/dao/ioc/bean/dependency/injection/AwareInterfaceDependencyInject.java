@@ -8,7 +8,7 @@ import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description: Aware接口实现的依赖注入
  * @author: Mabel.Chen
  * @create: 2020-02-15 17:43

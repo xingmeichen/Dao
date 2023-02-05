@@ -3,7 +3,7 @@ package com.dao.hw;
 import java.util.Scanner;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description:
  * @author: Mabel.Chen
  * @create: 2020-05-31 00:03

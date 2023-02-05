@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Lazy;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description: Bean的初始化示例
  * @author: Mabel.Chen
  * @create: 2020-02-15 15:12

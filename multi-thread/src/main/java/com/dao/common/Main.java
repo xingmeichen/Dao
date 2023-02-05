@@ -1,7 +1,7 @@
 package com.dao.common;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description:
  * @author: Mabel.Chen
  * @create: 2019-07-07 10:01

@@ -3,7 +3,7 @@ package com.dao.extendfeature;
 import lombok.Data;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description:
  * @author: Mabel.Chen
  * @create: 2020-04-12 11:35

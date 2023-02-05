@@ -5,7 +5,7 @@ import org.springframework.beans.factory.DisposableBean;
 import javax.annotation.PreDestroy;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description:
  * @author: Mabel.Chen
  * @create: 2020-02-15 16:10

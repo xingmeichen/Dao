@@ -10,7 +10,7 @@ import org.springframework.core.io.ResourceLoader;
 import javax.annotation.PostConstruct;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description: Bean 依赖
  * 该示例说明，依赖查找和依赖注入的依赖来源是不同的，
  * 依赖注入的依赖来源会比依赖查找的来源多一个ResolvableDependency (非Spring容器管理对象)

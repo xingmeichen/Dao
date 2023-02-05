@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @project: JavaLearning
+ * @project: Dao
  * @description: 基于Java注解的元数据配置
  * @author: Mabel.Chen
  * @create: 2020-02-14 15:34
