@@ -1,6 +1,5 @@
 
 const List = (props) => {
-
     return (
         <div>
             {props.list.map((item, index) => {

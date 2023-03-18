@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import AddList from './components/AddList';
 import List from './components/List';
+import Clock from './components/clock/Clock'
 
 const App = () => {
 
@@ -20,7 +21,8 @@ const App = () => {
 
   return (
     <div className="App">
-      <div>First React App</div>
+      <div>Welcome To React Pratice</div>
+      <Clock />
       <AddList addItem={addItem} />
       <List list={list} deleteItem={deleteItem} />
     </div>
