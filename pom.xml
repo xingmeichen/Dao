@@ -5,12 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.dao</groupId>
-    <artifactId>JavaLearning</artifactId>
+    <artifactId>march</artifactId>
     <packaging>pom</packaging>
-    <version>1.0</version>
+    <version>1.0.0</version>
     <modules>
         <module>algorithm</module>
-        <module>base</module>
         <module>design-pattern</module>
         <module>multi-thread</module>
         <module>spring</module>
@@ -20,14 +19,14 @@
         <module>netty</module>
         <module>grpc</module>
         <module>redis</module>
-        <module>datastructure</module>
+        <module>data-structure</module>
         <module>database</module>
     </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
     </properties>
 
     <dependencies>

@@ -5,7 +5,7 @@
     <test name="MabelTest">
         <parameter name="username" value="Mabel·Chen"/>
         <classes>
-            <class name="testng.MabelTest">
+            <class name="com.dao.automation.testng.MabelTest">
                 <methods>
                     <include name="mabelTest"/>
                     <include name="mabelTest2"/>

@@ -3,13 +3,15 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>JavaLearning</artifactId>
         <groupId>com.dao</groupId>
-        <version>1.0</version>
+        <artifactId>march</artifactId>
+        <version>1.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <groupId>com.dao</groupId>
     <artifactId>automation-test</artifactId>
+    <version>1.0.0</version>
 
     <dependencies>
 <!--        <dependency>-->
@@ -31,8 +33,6 @@
             <version>4.12</version>
             <scope>test</scope>
         </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
@@ -50,7 +50,7 @@
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>2.22.0</version>
                     <configuration>
-                        <suiteXmlFiles>src/test/resources/testng.xml</suiteXmlFiles>
+                        <suiteXmlFiles>src/test/resources/automation.testng.xml</suiteXmlFiles>
                     </configuration>
                 </plugin>
             </plugins>

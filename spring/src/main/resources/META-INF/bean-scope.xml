@@ -3,12 +3,12 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="user" class="com.dao.domain.User">
+    <bean id="user" class="com.dao.spring.base.domain.User">
         <property name="id" value="1"></property>
         <property name="name" value="Mabel"></property>
     </bean>
 
-    <bean id="otherUser" class="com.dao.domain.User" scope="prototype">
+    <bean id="otherUser" class="com.dao.spring.base.domain.User" scope="prototype">
         <property name="id" value="1"></property>
         <property name="name" value="Mabel"></property>
     </bean>

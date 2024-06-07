@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<Library>
+    <Book>
+        <Title>Green Eggs and Ham</Title>
+        <Author>Dr. Seuss</Author>
+        <Copyright>1957</Copyright>
+    </Book>
+    <Book>
+        <Title>Windows Shell Programming</Title>
+        <Author>Scott Seely</Author>
+        <Copyright>2000</Copyright>
+    </Book>
+</Library>

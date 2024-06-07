@@ -9,7 +9,7 @@
     <!-- 通过导入复用dependency-lookup.xml -->
     <import resource="dependency-lookup.xml"/>
 
-    <bean id="userRepository" class="com.dao.domain.repository.UserRepository">
+    <bean id="userRepository" class="com.dao.spring.base.domain.repository.UserRepository">
         <!-- 手动配置 缺点：硬编码，所以通常使用auto-wiring, 也就是自动绑定的模式-->
         <property name="users">
             <util:list>
@@ -20,5 +20,5 @@
     </bean>
 
     <!-- auto-wiring -->
-    <bean id="autoWiringUserRepository" class="com.dao.domain.repository.UserRepository" autowire="byType"/>
+    <bean id="autoWiringUserRepository" class="com.dao.spring.base.domain.repository.UserRepository" autowire="byType"/>
 </beans>
