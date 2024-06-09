@@ -1,0 +1,1 @@
+access permission, number of hard links, owner, group, size, date time last modified, file name
