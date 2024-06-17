@@ -1,6 +1,6 @@
 #!/bin/bash
 
-arr=('Apple' 'Banana', "Cherry")
+arr=('Apple' 'Banana' "Cherry")
 arr[3]='Dragon Fruit'
 
 # The first item

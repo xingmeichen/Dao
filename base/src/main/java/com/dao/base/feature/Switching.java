@@ -22,12 +22,12 @@ public class Switching {
 
     // since 17-Pattern matching for switch
     public static void switching1(Object obj) {
-        switch (obj) {
-            case null -> System.out.println("");
+//        switch (obj) {
+//            case null -> System.out.println("");
 //            case Integer -> System.out.println("Integer");
 //            case String -> System.out.println("String");
-            case User -> System.out.println("User");
-        }
+//            case User -> System.out.println("User");
+//        }
     }
 
     public static void main(String[] args) {
