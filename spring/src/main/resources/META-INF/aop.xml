@@ -8,6 +8,6 @@
         https://www.springframework.org/schema/aop/spring-aop.xsd">
 
     <aop:aspectj-autoproxy />
-    <bean class="com.dao.spring.base.aop.MabelAspect"/>
-    <bean class="com.dao.spring.base.aop.MabelMain"/>
+    <bean class="com.dao.spring.aop.MabelAspect"/>
+    <bean class="com.dao.spring.aop.MabelMain"/>
 </beans>

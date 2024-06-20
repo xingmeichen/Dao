@@ -32,12 +32,14 @@ public class StringDemo {
 
     /**
      * 该方法的调用不会对方法外的实参造成任何影响，因为当调用这个方法的时候，
-     * 只是将实际参数的值赋值给了形参a, b，然后在方法对a, b进行交换
+     * 只是将实际参数的值赋值给了形参a, b，然后在方法内对a, b进行交换
      */
     public static void swap(String a, String b) {
         String temp = a;
         a = b;
         b = temp;
+        System.out.println("In swap a = " + a);
+        System.out.println("In swap b = " + b);
     }
 
     public static void main(String[] args) {

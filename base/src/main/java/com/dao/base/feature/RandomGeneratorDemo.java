@@ -12,8 +12,8 @@ import java.util.random.RandomGeneratorFactory;
 public class RandomGeneratorDemo {
 
     public static void main(String[] args) {
-        RandomGeneratorFactory<RandomGenerator> factory = RandomGeneratorFactory.of("");
+        RandomGeneratorFactory<RandomGenerator> factory = RandomGeneratorFactory.of("L128X256MixRandom");
         RandomGenerator randomGenerator = factory.create(System.currentTimeMillis());
-        System.out.println(randomGenerator.nextInt());
+        System.out.println(randomGenerator.nextInt(10));
     }
 }

@@ -3,24 +3,24 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="person" class="com.dao.spring.base.domain.Person">
+    <bean id="person" class="com.dao.spring.domain.Person">
         <property name="name" value="Mabel"></property>
         <property name="age" value="18"></property>
     </bean>
 
-    <bean id="user" class="com.dao.spring.base.domain.User">
+    <bean id="user" class="com.dao.spring.domain.User">
         <property name="id" value="1"></property>
         <property name="name" value="Mabel"></property>
     </bean>
 
-    <bean id="student" class="com.dao.spring.base.domain.Student" parent="user" primary="true">
+    <bean id="student" class="com.dao.spring.domain.Student" parent="user" primary="true">
         <property name="id" value="0001"/>
         <property name="name" value="Monica"/>
         <property name="number" value="2020001"/>
     </bean>
 
 
-    <bean id="userFactory" class="com.dao.spring.base.util.UserFactory">
+    <bean id="userFactory" class="com.dao.spring.util.UserFactory">
         <lookup-method name="createUser" bean="user"></lookup-method>
     </bean>
 </beans>

@@ -6,5 +6,5 @@ package com.dao.base.feature.sealed;
  * @author: Mabel.Chen
  * @create: 2024-06-07
  **/
-public final class Apple extends Fruit {
+public non-sealed class Apple extends Fruit {
 }

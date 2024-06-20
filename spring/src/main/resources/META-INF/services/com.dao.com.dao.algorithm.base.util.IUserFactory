@@ -1,2 +1,2 @@
-com.dao.spring.base.util.DefaultUserFactory
-com.dao.spring.base.util.DefaultUserFactory
+com.dao.spring.util.DefaultUserFactory
+com.dao.spring.util.DefaultUserFactory

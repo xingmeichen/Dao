@@ -3,7 +3,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean class="com.dao.spring.base.domain.User">
+    <bean class="com.dao.spring.domain.User">
         <property name="id" value="1"></property>
         <property name="name" value="Mabel"></property>
     </bean>
