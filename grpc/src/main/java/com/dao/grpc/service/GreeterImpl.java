@@ -1,0 +1,12 @@
+package com.dao.grpc.service;//package com.dao.service;
+//
+//import com.dao.helloworld.GreeterGrpc;
+//
+///**
+// * @project: Dao
+// * @description:
+// * @author: Mabel.Chen
+// * @create: 2021-07-06 12:22
+// **/
+//public class GreeterImpl extends GreeterGrpc.GreeterImplBase {
+//}
