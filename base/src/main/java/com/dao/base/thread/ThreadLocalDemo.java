@@ -1,6 +1,6 @@
 package com.dao.base.thread;
 
-import com.dao.algorithm.base.ticket.TicketThread;
+import com.dao.base.thread.ticket.TicketThread;
 
 /**
  * @project:

@@ -1,7 +1,7 @@
 package com.dao.base.thread.threadpool;
 
-import com.dao.algorithm.base.ticket.TicketCallable;
-import com.dao.algorithm.base.ticket.TicketThread;
+import com.dao.base.thread.ticket.TicketCallable;
+import com.dao.base.thread.ticket.TicketThread;
 
 import java.util.concurrent.*;
 
