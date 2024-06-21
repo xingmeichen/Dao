@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: "config-client"
+  config:
+    import: configserver:http://localhost:8090
+  cloud:
+    bootstrap:
+      enabled: true
+    config:
+      name: "application-local, application-dev"
+      uri: "http://localhost:8090"
+
+server:
+  port: "8091"

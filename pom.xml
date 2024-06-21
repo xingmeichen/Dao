@@ -20,6 +20,8 @@
         <module>redis</module>
         <module>data-structure</module>
         <module>database</module>
+        <module>spring-config-server</module>
+        <module>spring-config-client</module>
     </modules>
 
     <properties>

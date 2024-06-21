@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: "config-server"
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: file:spring-config-server/src/main/resources/env
+
+server:
+  port: "8090"
