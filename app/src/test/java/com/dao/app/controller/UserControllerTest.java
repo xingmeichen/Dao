@@ -1,10 +1,13 @@
 package com.dao.app.controller;
 
+import com.dao.app.repository.UserRepository;
+import com.dao.app.service.UserService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
+import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
@@ -17,6 +20,9 @@ class UserControllerTest {
 
     @InjectMocks
     private UserController userController;
+
+    @Mock
+    private UserService userServiceImpl;
 
     private MockMvc mockMvc;
 

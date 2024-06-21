@@ -2,6 +2,8 @@ package com.dao.app.service;
 
 import com.dao.app.domain.User;
 
+import java.util.List;
+
 /**
  * @project: Dao
  * @description:
@@ -11,4 +13,8 @@ import com.dao.app.domain.User;
 public interface UserService {
 
     User getUserById(Long id);
+
+    List<User> listUsers();
+
+    User getUserByUserName(String userName);
 }
