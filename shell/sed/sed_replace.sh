@@ -5,10 +5,11 @@
 ## Note: -i means the file content will be changed !!
 ## sed -i 's/{old}/{new}/g' {the_file} ## replace every matching for the whole file, g: global
 ## sed -i 's/{old}/{new}/' {the_file}  ## replace the first matching for each line
+## s: substitute(means replace)
 sed -i 's/line_/line/g' ./input.txt
 sed -i 's/line_/line/' ./input.txt
 
-## update file, replace the whole line with new content
+## update file, if there is matching content in one line, then will replace the whole line with new content
 ## sed -i '{n}c {new_content}' {the_file}
 sed -i '2c abcd efg' ./input.txt
 
