@@ -48,6 +48,9 @@ public class Main {
         //输入的被转化的时间格式
         SimpleDateFormat dff = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS", Locale.ENGLISH);
         Date date1 = dff.parse(dateStr);
-        System.out.println(date1);;
+        System.out.println(date1);
+
+        System.out.println(now instanceof Date);
+        System.out.println(now instanceof Object);
     }
 }
