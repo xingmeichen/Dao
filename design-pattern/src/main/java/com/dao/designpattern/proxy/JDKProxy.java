@@ -1,8 +1,5 @@
 package com.dao.designpattern.proxy;
 
-import com.dao.algorithm.base.proxy.Person;
-import com.dao.algorithm.base.proxy.Teacher;
-
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
@@ -41,7 +38,7 @@ public class JDKProxy implements InvocationHandler {
 
     public static void main(String[] args) {
         JDKProxy JDKProxy = new JDKProxy();
-        com.dao.algorithm.base.proxy.Person targetObject = (Person) JDKProxy.getTargetObject(new Teacher());
+        Person targetObject = (Person) JDKProxy.getTargetObject(new Teacher());
         // 下面这行代码执行时候会报错，表明了 JDK动态代理是针对实现了接口类生成代理，而不能针对没有实现接口的类。
 //        Teacher teacher = (Teacher) JDKProxy.getTargetObject(new Teacher());
         targetObject.task();
