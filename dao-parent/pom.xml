@@ -11,7 +11,7 @@
 
     <groupId>com.dao</groupId>
     <artifactId>dao-parent</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.0</version>
     <name>dao-parent</name>
     <packaging>pom</packaging>
     <description>Dao parent pom providing dependency and plugin management for applications built with Maven</description>
@@ -31,8 +31,9 @@
         <commons-collections4.version>4.3</commons-collections4.version>
         <commons-io.version>2.16.1</commons-io.version>
         <logback-classic.version>1.5.6</logback-classic.version>
-        <junit-jupiter.version>5.10.2</junit-jupiter.version>
         <jackson-databind.version>2.17.1</jackson-databind.version>
+        <junit-jupiter.version>5.10.2</junit-jupiter.version>
+        <mockito-junit-jupiter.version>5.7.0</mockito-junit-jupiter.version>
     </properties>
 
     <dependencyManagement>
@@ -101,15 +102,20 @@
                 <version>${logback-classic.version}</version>
             </dependency>
             <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${jackson-databind.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.junit.jupiter</groupId>
                 <artifactId>junit-jupiter</artifactId>
                 <version>${junit-jupiter.version}</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
-                <groupId>com.fasterxml.jackson.core</groupId>
-                <artifactId>jackson-databind</artifactId>
-                <version>${jackson-databind.version}</version>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-junit-jupiter</artifactId>
+                <version>${mockito-junit-jupiter.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

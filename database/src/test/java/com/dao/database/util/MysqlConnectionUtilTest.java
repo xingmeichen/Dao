@@ -1,6 +1,8 @@
-package com.dao.algorithm.base.util;
+package com.dao.database.util;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.junit.jupiter.MockitoExtension;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -12,6 +14,7 @@ import java.sql.ResultSet;
  * @author: Mabel.Chen
  * @create: 2022-11-12
  **/
+@ExtendWith(MockitoExtension.class)
 public class MysqlConnectionUtilTest {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(MysqlConnectionUtilTest.class);
