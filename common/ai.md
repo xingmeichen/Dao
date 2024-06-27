@@ -15,6 +15,6 @@ Github Copilot
 3. AI Agent 
 
 向量数据库（Vector database）
-RAG
+RAG (Retrieval Augmented Generation): 检索增强生成
 fine-tuning(微调)
 
