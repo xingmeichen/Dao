@@ -13,3 +13,8 @@ Github Copilot
 1. AI Embedded
 2. AI copilot 
 3. AI Agent 
+
+向量数据库（Vector database）
+RAG
+fine-tuning(微调)
+
