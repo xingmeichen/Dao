@@ -1,5 +1,10 @@
 #!/bin/bash
 
-echo $#
-base_dir=$(dirname $0)
-echo $base_dir
+array=(A B C D)
+echo ${array[@]}
+
+for key in ${array[*]}
+do
+  echo $key
+done
+

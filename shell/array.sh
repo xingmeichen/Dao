@@ -19,3 +19,10 @@ echo ${arr[@]}
 # The array length
 echo ${#arr[*]}
 echo ${#arr[@]}
+
+# The key of array
+echo ${!arr[*]}
+echo ${!arr[@]}
+echo '------------'
+
+
