@@ -17,9 +17,13 @@ public class VectorDemo {
 
     public static void main(String[] args) {
         List<String> vector = new Vector<>();
+        int size = vector.size();
         vector.add("A");
         vector.add("B");
         vector.add("C");
         vector.stream().forEach(System.out::println);
+
+        int[] array = new int[10];
+        System.out.println(array.length);
     }
 }
