@@ -12,7 +12,7 @@ a='Apple'
 b='App'
 if [ $a != $b ]
 then
-  echo 'a equals to b'
+  echo 'a not equals to b'
 fi
 
 c=
