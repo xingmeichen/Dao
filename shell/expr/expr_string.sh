@@ -18,29 +18,29 @@ fi
 c=
 if [ -z $c ]
 then
-  echo 'c is empty'
+  echo 'the lenght of c is 0'
 fi
 
 d='App'
-if [ -n $c ]
+if [ -n $d ]
 then
-  echo 'd is not empty'
+  echo 'the length of d is not 0'
 fi
 
-e=' '
-if [ $c ]
+e='abc'
+if [ $e ]
 then
-  echo 'e is not blank'
+  echo 'e is not empty'
 else
-  echo 'e is blank'
+  echo 'e is empty'
 fi
 
-e=' '
-if [ !$c ]
+f=''
+if [ !$f ]
 then
-  echo 'e is blank'
+  echo 'f is empty'
 else
-  echo 'e is not blank'
+  echo 'f is not empty'
 fi
 
 
