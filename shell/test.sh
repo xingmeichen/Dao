@@ -1,10 +1,6 @@
 #!/bin/bash
 
-array=(A B C D)
-echo ${array[@]}
-
-for key in ${array[*]}
-do
-  echo $key
-done
+echo "The number of parameter: $#"
+echo "All parameters: $*"
+echo "Each parameter: $@"
 
