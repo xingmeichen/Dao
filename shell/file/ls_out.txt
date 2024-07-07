@@ -1,8 +1,0 @@
-access permission, number of hard links, owner, group, size, date time last modified, file name
--rwxr-xr-x  1 mabelchen  staff   76 Jun  9 12:36 file_include.sh
--rwxr-xr-x  1 mabelchen  staff  466 Jun  9 18:44 file_manage.sh
--rw-r--r--  1 mabelchen  staff   34 Jun  9 12:55 input.txt
--rwxr-xr-x  1 mabelchen  staff   70 Jun  9 12:58 input_from_file.sh
--rw-r--r--  1 mabelchen  staff   96 Jun  9 18:44 ls_out.txt
--rw-r--r--  1 mabelchen  staff   68 Jun  9 17:14 output.txt
--rwxr-xr-x  1 mabelchen  staff  112 Jun  9 17:14 output_to_file.sh
