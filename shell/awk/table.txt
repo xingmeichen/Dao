@@ -1,0 +1,5 @@
+Name    Chinese English Math    Average
+Alice   96  77  86  86.33
+Bob     89  73  99  87.00
+Carole  76  86  94  85.33
+David   83  89  86  86
