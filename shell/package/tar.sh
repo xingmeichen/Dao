@@ -18,8 +18,8 @@ tar -czvf {tar_target_file} {source_file}
 ### 解包文件到当前目录
 tar -xvf {tar_source_file}
 
-### 解包到指定目录
+### 解包到指定目录 (目标目录必须是已经创建的目录)
 tar -xvf {tar_source_file} -C {target_dir}
-
+## eg. tar -xvf ./a.sh -C ./ ## (注意这里的目标目录是./ 而不是 .)
 
 
