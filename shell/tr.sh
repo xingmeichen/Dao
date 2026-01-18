@@ -1,6 +1,6 @@
 #!/bin/bash
 
-## tr 用于修改内容
+## tr 用于修改内容, 是Text replace 的缩写
 ## 将小写全部改成大写
 echo 'Hello' | tr '[a-z]' '[A-Z]' ## HELLO
 

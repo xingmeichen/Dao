@@ -36,3 +36,8 @@ tmp/
 tmp/*
 
 mypython/
+
+pyjourney/.github/
+pyjourney/__pycache__/
+
+
